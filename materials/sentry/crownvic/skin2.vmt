@@ -1,0 +1,23 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "sentry/crownvic/skin2"
+	"$bumpmap" "sentry/crownvic/skin_nm"
+   	 $surfaceprop "metal"
+  	 $blendtintbybasealpha "1"
+    	 $envmap "env_cubemap"
+    	 $envmaptint "[1 1 1]"
+ 	 $envmapcontrast "1"
+  	 $envmapsaturation ".5"
+  	 $envmapfresnel "1"
+   	 $phong "1"
+  	 $phongexponent "70"
+  	 $phongboost "10"
+  	 $phongfresnelranges "[.05 .3 1]"
+
+
+	$detail "sentry/crownvic/paint"
+	$detailscale "1000"
+	$detailblendfactor "0.01"
+	$detailblendmode "1"
+
+}

@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "sentry/hellcat/skin2"
+	"$bumpmap" "sentry/explorer/skin_nm"
+    	"$phong" 1
+	"$phongexponent" 200
+	"$phongboost"	0.7
+	"$phongfresnelranges" "[0 100 10]"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.4 0.4 0.4]"
+	"$normalmapalphaenvmapmask" 1
+}
+
+
+
