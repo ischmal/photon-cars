@@ -15,11 +15,12 @@ local EMV = {}
 
 --util.PrecacheModel( "models/schmal/fedsig_visionslr/vision_lightbar.mdl" )
 
-EMV.Siren = 2
+EMV.Siren = 3
 
 EMV.Color = Color( 235, 235, 235 )
 
-EMV.Skin = 0
+EMV.Skin = 1
+// EMV.Skin = "photon/override/lw_dc15_tail"
 
 EMV.BodyGroups = {
 }
@@ -74,60 +75,49 @@ EMV.Sequences = {
 		Sequences = {
 		{
 			Name = "CODE 1",
-			Components = {	},
-			Preset_Components = {
-				[1] = {
-					["auto_fedsig_integrity"] = "pattern_1",
-				},
-				[2] = {
-					["auto_fedsig_legend"] = "pattern_7",
-				},
-				[3] = {
-					["auto_fedsig_valor"] = "all"
-				},
-				[4] = {
-					["auto_fedsig_visionslr"] = "code2",
-					["auto_fedsig_visionslr_traffic"] = "warn",
-				},
-				[5] = {
-					["auto_whelen_justice"] = "all"
-				},
-				[6] = {
-					["auto_whelen_legacy"] = "all"
-				},
-				[7] = {
-					["auto_whelen_liberty_sx"] = "all",
-				},
-			},
+			Stage = "M1",
+			Components = {},
+			Preset_Components = {},
 			Disconnect = {}
 		},
 		{
 			Name = "CODE 2",
+			Stage = "M2",
 			Components = {	},
-			Preset_Components = {
-				[1] = {
-					["auto_fedsig_integrity"] = "code2",
-					["auto_fedsig_integrity_corner"] = "alt_slow"
-				},
-				[2] = {
-					["auto_fedsig_legend"] = "code2",
-					["auto_fedsig_legend_corner"] = "code2"
-				},
-			},
+			Preset_Components = {},
 			Disconnect = {}
 		},
 		{
 			Name = "CODE 3",
+			Stage = "M3",
 			Components = {	},
-			Preset_Components = {
-				[1] = {
-					["auto_fedsig_integrity"] = "code3",
-					["auto_fedsig_integrity_corner"] = "code3"
-				},
-			},
+			Preset_Components = {},
 			Disconnect = {}
 		}
 	},
+	Traffic = {
+		{
+			Name = "LEFT",
+			Stage = "L",
+			Components = {},
+			Preset_Components = {},
+			Disconnect = {}
+		},
+	    {
+			Name = "RIGHT",
+			Stage = "R",
+			Components = {},
+			Preset_Components = {},
+			Disconnect = {}
+		},
+	    {
+			Name = "DIVERGE",
+			Stage = "D",
+			Components = {},
+			Preset_Components = {},
+			Disconnect = {}
+		},
+	}
 }
 
 EMV.Auto = {
@@ -135,43 +125,50 @@ EMV.Auto = {
 		ID = "Federal Signal Integrity",
 		Scale = .96,
 		Pos = Vector( 0, -18, 75.2 ),
-		Ang = Angle( 0, 90, 0)
+		Ang = Angle( 0, 90, 0),
+		AutoPatterns = true,
 	},
 	[2] = {
 		ID = "Federal Signal Legend",
 		Scale = 1,
 		Pos = Vector( 0, -18, 76.1 ),
-		Ang = Angle( 0, 90, 0)
+		Ang = Angle( 0, 90, 0),
+		AutoPatterns = true,
 	},
 	[3] = {
 		ID = "Federal Signal Valor",
 		Scale = .9,
 		Pos = Vector( 0, -15, 76.25 ),
-		Ang = Angle( 0, 90, 0)
+		Ang = Angle( 0, 90, 0),
+		AutoPatterns = true,
 	},
 	[4] = {
 		ID = "Federal Signal Vision SLR",
 		Scale = .90,
 		Pos = Vector( 0, -17, 77.3 ),
 		Ang = Angle( 0, 90, 0),
+		AutoPatterns = true,
 	},
 	[5] = {
 		ID = "Whelen Justice",
 		Scale = 1.07,
 		Pos = Vector( 0, -17, 77.25 ),
-		Ang = Angle( 0, 90, 0)
+		Ang = Angle( 0, 90, 0),
+		AutoPatterns = true,
 	},
 	[6] = {
 		ID = "Whelen Legacy",
 		Scale = 1.02,
 		Pos = Vector( 0, -17, 75.2 ),
-		Ang = Angle( 0, 90, 0)
+		Ang = Angle( 0, 90, 0),
+		AutoPatterns = true,
 	},
 	[7] = {
 		ID = "Whelen Liberty SX",
 		Scale = .96,
 		Pos = Vector( 0, -18, 75.3 ),
-		Ang = Angle( 0, 90, 0)
+		Ang = Angle( 0, 90, 0),
+		AutoPatterns = true,
 	},
 }
 
