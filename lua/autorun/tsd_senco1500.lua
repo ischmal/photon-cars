@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-local name = "SenCo Ford 350 SuperDuty"
+local name = "SenCo Dodge Ram 1500 Outdoorsman"
 
 local A = "AMBER"
 local R = "RED"
@@ -19,10 +19,15 @@ EMV.Siren = 0
 
 EMV.Color = Color( 235, 235, 235 )
 
-EMV.Skin = 3
-// EMV.Skin = "photon/override/lw_dc15_tail"
+EMV.Skin = 0
 
 EMV.BodyGroups = {
+	{ 2, 5 },
+	{ 10, 4 },
+	{ 16, 1 },
+	{ 15, 0 },
+	{ 8, 1 },
+	{ 4, 1 },
 }
 
 EMV.Props = {}
@@ -85,15 +90,15 @@ EMV.Sequences = {
 EMV.Auto = {
 	[1] = {
 		ID = "Federal Signal Integrity SenCo",
-		Scale = 1.1,
-		Pos = Vector( 0, 6, 102 ),
+		Scale = 1.02,
+		Pos = Vector( 0, 16, 93 ),
 		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[2] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
-		Pos = Vector( 12.7, 139, 54.75 ),
+		Pos = Vector( 10, 143.2, 44 ),
 		Ang = Angle( 0, -6, -90 ),
 		AutoPatterns = true,
 		Color1 = "AMBER",
@@ -102,7 +107,7 @@ EMV.Auto = {
 	[3] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
-		Pos = Vector( -12.7, 139, 54.75 ),
+		Pos = Vector( -10, 143.2, 44 ),
 		Ang = Angle( 0, 6, -90 ),
 		AutoPatterns = true,
 		Color1 = "AMBER",
@@ -111,8 +116,8 @@ EMV.Auto = {
 	[4] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
-		Pos = Vector( 17, -163.5, 38.4 ),
-		Ang = Angle( 0, 0, 90 ),
+		Pos = Vector( 19, -125, 32 ),
+		Ang = Angle( 0, 2.5, 90 ),
 		AutoPatterns = true,
 		Color1 = "AMBER",
 		Phase = "A",
@@ -120,8 +125,8 @@ EMV.Auto = {
 	[5] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
-		Pos = Vector( -17, -163.5, 38.4 ),
-		Ang = Angle( 0, 0, 90 ),
+		Pos = Vector( -19, -125, 32 ),
+		Ang = Angle( 0, -2.5, 90 ),
 		AutoPatterns = true,
 		Color1 = "AMBER",
 		Phase = "B",
@@ -167,13 +172,11 @@ local V = {
 				Name =	name,
 				Class = "prop_vehicle_jeep",
 				Category = "SenCo",
-				Author = "TDM, TheSenDest",
+				Author = "LoneWolfie, TheSenDest",
 				Information = "",
-				Model =	"models/tdmcars/for_f350.mdl",
-
-			
+				Model =	"models/LoneWolfie/dodge_ram_1500_outdoorsman.mdl",			
 				KeyValues = {				
-						vehiclescript =	"scripts/vehicles/TDMCars/f350.txt"
+						vehiclescript =	"scripts/vehicles/LWCars/dodge_ram_1500_outdoorsman.txt"
 					    },
 				IsEMV = true,
 				EMV = EMV,
