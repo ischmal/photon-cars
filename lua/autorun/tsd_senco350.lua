@@ -79,7 +79,52 @@ EMV.Sequences = {
 			Preset_Components = {},
 			Disconnect = {}
 		},
+	},
+	Illumination = {
+		{
+			Name = "FRNT",
+			Icon = "takedown",
+			Stage = "T",
+			Components = {},
+			Preset_Components = {},
+			Lights = {
+				{ Vector( 16.6, 15, 102 ), Angle( 20, 90, -0 ), "forward" },
+				{ Vector( -16.6, 15, 102 ), Angle( 20, 90, -0 ), "forward" },
+			},
+			Disconnect = {}
+		},
+	    {
+			Name = "FULL",
+			Icon = "lamp",
+			Stage = "A",
+			Components = {},
+			Preset_Components = {},
+			Lights = {
+				{ Vector( 16.6, 15, 102 ), Angle( 20, 90, -0 ), "forward" },
+				{ Vector( -16.6, 15, 102 ), Angle( 20, 90, -0 ), "forward" },
+				{ Vector( 31, 6.7, 102 ), Angle( 20, 0, -0 ), "side" },
+				{ Vector( -31, 6.7, 102 ), Angle( 20, 180, -0 ), "side" },
+			},
+			Disconnect = {}
+		},
 	}
+}
+
+EMV.Lamps = {
+	["forward"] = {
+		Color = Color(215,225,255,255),
+		Texture = "effects/flashlight001",
+		Near = 150,
+		FOV = 60,
+		Distance = 700,
+	},
+	["side"] = {
+		Color = Color(215,225,255,255),
+		Texture = "effects/flashlight001",
+		Near = 10,
+		FOV = 60,
+		Distance = 700,
+	},
 }
 
 EMV.Auto = {

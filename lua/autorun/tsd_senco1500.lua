@@ -19,7 +19,7 @@ EMV.Siren = 0
 
 EMV.Color = Color( 235, 235, 235 )
 
-EMV.Skin = 0
+EMV.Skin = 4
 
 EMV.BodyGroups = {
 	{ 2, 5 },
@@ -84,7 +84,52 @@ EMV.Sequences = {
 			Preset_Components = {},
 			Disconnect = {}
 		},
+	},
+	Illumination = {
+		{
+			Name = "FRNT",
+			Icon = "takedown",
+			Stage = "T",
+			Components = {},
+			Preset_Components = {},
+			Lights = {
+				{ Vector( 15.37, 30, 93.75 ), Angle( 20, 90, -0 ), "forward" },
+				{ Vector( -15.37, 30, 93.75 ), Angle( 20, 90, -0 ), "forward" },
+			},
+			Disconnect = {}
+		},
+	    {
+			Name = "FULL",
+			Icon = "lamp",
+			Stage = "A",
+			Components = {},
+			Preset_Components = {},
+			Lights = {
+				{ Vector( 15.37, 30, 93.75 ), Angle( 20, 90, -0 ), "forward" },
+				{ Vector( -15.37, 30, 93.75 ), Angle( 20, 90, -0 ), "forward" },
+				{ Vector( 29.12, 16.63, 93.88 ), Angle( 20, 0, -0 ), "side" },
+				{ Vector( -29.12, 16.63, 93.88 ), Angle( 20, 180, -0 ), "side" },
+			},
+			Disconnect = {}
+		},
 	}
+}
+
+EMV.Lamps = {
+	["forward"] = {
+		Color = Color(215,225,255,255),
+		Texture = "effects/flashlight001",
+		Near = 150,
+		FOV = 60,
+		Distance = 700,
+	},
+	["side"] = {
+		Color = Color(215,225,255,255),
+		Texture = "effects/flashlight001",
+		Near = 5,
+		FOV = 60,
+		Distance = 700,
+	},
 }
 
 EMV.Auto = {
@@ -131,13 +176,31 @@ EMV.Auto = {
 		Color1 = "AMBER",
 		Phase = "B",
 	},
+	[6] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( 33, -115.4, 82 ),
+		Ang = Angle( 0, 0, 90 ),
+		AutoPatterns = true,
+		Color1 = "GREEN",
+		Phase = "B",
+	},
+	[7] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( -33, -115.4, 82 ),
+		Ang = Angle( 0, 0, 90 ),
+		AutoPatterns = true,
+		Color1 = "GREEN",
+		Phase = "A",
+	},
 }
 
 EMV.Presets = {
 	[1] = {
 		Name = "Federal Signal Integrity",
 		Bodygroups = {},
-		Auto = { 1, 2, 3, 4, 5 },
+		Auto = { 1, 2, 3, 4, 5, 6, 7 },
 		Props = {}
 	},
 }
