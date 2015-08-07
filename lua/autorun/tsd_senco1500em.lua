@@ -136,9 +136,7 @@ EMV.Auto = {
 		Scale = 1.02,
 		Pos = Vector( 0, 16, 93 ),
 		Ang = Angle( 1, 90, 0),
-		AutoPatterns = true,
-		Color1 = "BLUE",
-		Color2 = "BLUE"
+		AutoPatterns = true
 	},
 	[2] = {
 		ID = "Whelen 700",
@@ -155,7 +153,7 @@ EMV.Auto = {
 		Pos = Vector( -10, 143.2, 44 ),
 		Ang = Angle( 0, 6, -90 ),
 		AutoPatterns = true,
-		Color1 = "BLUE",
+		Color1 = "RED",
 		Phase = "B",
 	},
 	[4] = {
@@ -164,7 +162,7 @@ EMV.Auto = {
 		Pos = Vector( 19, -125, 32 ),
 		Ang = Angle( 0, 2.5, 90 ),
 		AutoPatterns = true,
-		Color1 = "BLUE",
+		Color1 = "RED",
 		Phase = "A",
 	},
 	[5] = {
@@ -176,13 +174,49 @@ EMV.Auto = {
 		Color1 = "BLUE",
 		Phase = "B",
 	},
+	[6] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( -47, -105, 52 ),
+		Ang = Angle( 0, -90, 90 ),
+		AutoPatterns = true,
+		Color1 = "BLUE",
+		Phase = "B",
+	},
+	[7] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( -47, -105, 49 ),
+		Ang = Angle( 0, -90, 90 ),
+		AutoPatterns = true,
+		Color1 = "RED",
+		Phase = "A",
+	},
+	[8] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( 47, -105, 52 ),
+		Ang = Angle( 0, 90, 90 ),
+		AutoPatterns = true,
+		Color1 = "BLUE",
+		Phase = "B",
+	},
+	[9] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( 47, -105, 49 ),
+		Ang = Angle( 0, 90, 90 ),
+		AutoPatterns = true,
+		Color1 = "RED",
+		Phase = "A",
+	},
 }
 
 EMV.Presets = {
 	[1] = {
 		Name = "Federal Signal Integrity",
 		Bodygroups = {},
-		Auto = { 1, 2, 3, 4, 5 },
+		Auto = { 1, 2, 3, 4, 5, 6, 7, 8, 9 },
 		Props = {}
 	},
 }
