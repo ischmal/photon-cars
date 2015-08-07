@@ -13,7 +13,7 @@ local G = "GREEN"
 
 local EMV = {}
 
-EMV.Siren = 0
+EMV.Siren = 4
 
 EMV.Color = Color( 255, 255, 255 )
 
