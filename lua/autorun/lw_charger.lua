@@ -117,104 +117,119 @@ EMV.Sequences = {
 			Preset_Components = {},
 			Disconnect = {}
 		},
-	}
+	},
 }
 
 EMV.Auto = {
-	[1] = {
-		ID = "Federal Signal Integrity",
-		Scale = .96,
-		Pos = Vector( 0, -18, 75.2 ),
-		Ang = Angle( 0, 90, 0),
-		AutoPatterns = true,
-	},
-	[2] = {
-		ID = "Federal Signal Legend",
-		Scale = 1,
-		Pos = Vector( 0, -18, 76.1 ),
-		Ang = Angle( 0, 90, 0),
-		AutoPatterns = true,
-	},
-	[3] = {
-		ID = "Federal Signal Valor",
-		Scale = .9,
-		Pos = Vector( 0, -15, 76.25 ),
-		Ang = Angle( 0, 90, 0),
-		AutoPatterns = true,
-	},
-	[4] = {
-		ID = "Federal Signal Vision SLR",
-		Scale = .90,
-		Pos = Vector( 0, -17, 77.3 ),
-		Ang = Angle( 0, 90, 0),
-		AutoPatterns = true,
-	},
-	[5] = {
-		ID = "Whelen Justice",
-		Scale = 1.07,
-		Pos = Vector( 0, -17, 77.25 ),
-		Ang = Angle( 0, 90, 0),
-		AutoPatterns = true,
-	},
-	[6] = {
-		ID = "Whelen Legacy",
-		Scale = 1.02,
-		Pos = Vector( 0, -17, 75.2 ),
-		Ang = Angle( 0, 90, 0),
-		AutoPatterns = true,
-	},
-	[7] = {
-		ID = "Whelen Liberty SX",
-		Scale = .96,
-		Pos = Vector( 0, -18, 75.3 ),
-		Ang = Angle( 0, 90, 0),
-		AutoPatterns = true,
-	},
+	// [1] = {
+	// 	ID = "Federal Signal Integrity",
+	// 	Scale = .96,
+	// 	Pos = Vector( 0, -18, 75.2 ),
+	// 	Ang = Angle( 0, 90, 0),
+	// 	AutoPatterns = true,
+	// },	
+	// [2] = {
+	// 	ID = "Federal Signal Legend",
+	// 	Scale = 1,
+	// 	Pos = Vector( 0, -18, 76.1 ),
+	// 	Ang = Angle( 0, 90, 0),
+	// 	AutoPatterns = true,
+	// },
+	// [3] = {
+	// 	ID = "Federal Signal Valor",
+	// 	Scale = .9,
+	// 	Pos = Vector( 0, -15, 76.25 ),
+	// 	Ang = Angle( 0, 90, 0),
+	// 	AutoPatterns = true,
+	// },
+	// [4] = {
+	// 	ID = "Federal Signal Vision SLR",
+	// 	Scale = .90,
+	// 	Pos = Vector( 0, -17, 77.3 ),
+	// 	Ang = Angle( 0, 90, 0),
+	// 	AutoPatterns = true,
+	// },
+	// [5] = {
+	// 	ID = "Whelen Justice",
+	// 	Scale = 1.07,
+	// 	Pos = Vector( 0, -17, 77.25 ),
+	// 	Ang = Angle( 0, 90, 0),
+	// 	AutoPatterns = true,
+	// },
+	// [6] = {
+	// 	ID = "Whelen Legacy",
+	// 	Scale = 1.02,
+	// 	Pos = Vector( 0, -17, 75.2 ),
+	// 	Ang = Angle( 0, 90, 0),
+	// 	AutoPatterns = true,
+	// },
+	// [7] = {
+	// 	ID = "Whelen Liberty SX",
+	// 	Scale = .96,
+	// 	Pos = Vector( 0, -18, 75.3 ),
+	// 	Ang = Angle( 0, 90, 0),
+	// 	AutoPatterns = true,
+	// },
+	//-0.000668 0.000063 -1.000000
+
+	// [1] = {
+	// 	ID = "TDM Rear Interior Lightbar",
+	// 	Scale = 1,
+	// 	Pos = Vector( 0, 0, 0),
+	// 	Ang = Angle( 0, 0, 0 ),
+	// 	AutoPatterns = true,
+	// },
 }
 
 EMV.Presets = {
-	[1] = {
-		Name = "Federal Signal Integrity",
-		Bodygroups = {},
-		Auto = { 1 },
-		Props = {}
-	},
-	[2] = {
-		Name = "Federal Signal Legend",
-		Bodygroups = {},
-		Auto = { 2 },
-		Props = {}
-	},
-	[3] = {
-		Name = "Federal Signal Valor",
-		Bodygroups = {},
-		Auto = { 3 },
-		Props = {}
-	},
-	[4] = {
-		Name = "Federal Signal Vision SLR",
-		Bodygroups = {},
-		Auto = { 4 },
-		Props = {}
-	},
-	[5] = {
-		Name = "Whelen Justice",
-		Bodygroups = {},
-		Auto = { 5 },
-		Props = {}
-	},
-	[6] = {
-		Name = "Whelen Legacy",
-		Bodygroups = {},
-		Auto = { 6 },
-		Props = {}
-	},
-	[7] = {
-		Name = "Whelen Liberty",
-		Bodygroups = {},
-		Auto = { 7 },
-		Props = {}
-	},
+	// [1] = {
+	// 	Name = "Whelen Vertex",
+	// 	Bodygroups = {},
+	// 	Auto = { 1 },
+	// 	Props = {}
+	// },
+	// [1] = {
+	// 	Name = "Federal Signal Integrity",
+	// 	Bodygroups = {},
+	// 	Auto = { 1, 8 },
+	// 	Props = {}
+	// },
+	// [2] = {
+	// 	Name = "Federal Signal Legend",
+	// 	Bodygroups = {},
+	// 	Auto = { 2 },
+	// 	Props = {}
+	// },
+	// [3] = {
+	// 	Name = "Federal Signal Valor",
+	// 	Bodygroups = {},
+	// 	Auto = { 3 },
+	// 	Props = {}
+	// },
+	// [4] = {
+	// 	Name = "Federal Signal Vision SLR",
+	// 	Bodygroups = {},
+	// 	Auto = { 4 },
+	// 	Props = {}
+	// },
+	// [5] = {
+	// 	Name = "Whelen Justice",
+	// 	Bodygroups = {},
+	// 	Auto = { 5 },
+	// 	Props = {}
+	// },
+	// [6] = {
+	// 	Name = "Whelen Legacy",
+	// 	Bodygroups = {},
+	// 	Auto = { 6 },
+	// 	Props = {}
+	// },
+	// [7] = {
+	// 	Name = "Whelen Liberty",
+	// 	Bodygroups = {},
+	// 	Auto = { 7 },
+	// 	Props = {}
+	// },
 }
 
 EMV.Meta = {}
