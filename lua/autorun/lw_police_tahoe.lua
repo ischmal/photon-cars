@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-local name = "2007 Chevrolet Tahoe Police"
+local name = "Chevrolet Tahoe PPV"
 
 local A = "AMBER"
 local R = "RED"
@@ -163,6 +163,13 @@ EMV.Meta = {
 		Scale = 1,
 		WMult = 1.3
 	},
+	spotlight = {
+		AngleOffset = -90,
+		W = 7.25,
+		H = 7.25,
+		Sprite = "sprites/emv/light_circle",
+		Scale = 3.25,
+	}
 }
 
 EMV.Positions = {
@@ -244,6 +251,8 @@ EMV.Positions = {
 
 	[41] = { Vector( -38.57, 101.74, 40.35 ), Angle( 0, 18, 0 ), "front_signal" },
 	[42] = { Vector( 38.57, 101.74, 40.35 ), Angle( 0, -18, 0 ), "front_signal" },
+
+	[43] = { Vector( -41.4, 45.51, 71.81 ), Angle( -17.26, 0, 0 ), "spotlight" },
 
 }
 
@@ -537,6 +546,36 @@ EMV.Sequences = {
 			Disconnect = {}
 		},
 	},
+	Illumination = {
+		{
+			Name = "Takedown",
+			Icon = "takedown",
+			Stage = "T",
+			Components = {},
+			BG_Components = {
+				["Lamp"] = {
+					["1"] = {
+						{ 43, W }
+					}
+				}
+			},
+			Preset_Components = {},
+			Lights = {
+				{ Vector( 0, 0, 90 ), Angle( 45, 90, 0 ), "takedown" },
+			},
+			Disconnect = {}
+		},
+	}
+}
+
+EMV.Lamps = {
+	["takedown"] = {
+		Color = Color(215,225,255,255),
+		Texture = "effects/flashlight001",
+		Near = 160,
+		FOV = 120,
+		Distance = 800,
+	},
 }
 
 EMV.Auto = {
@@ -636,16 +675,24 @@ EMV.Auto = {
 		Pos = Vector( 0, 29.5, 78.6),
 		Ang = Angle( 0, 90, 0 ),
 		AutoPatterns = true,
-	}
+	},
+	[14] = {
+		ID = "Federal Signal Vision SLR R/B",
+		Scale = .98,
+		Pos = Vector( 0, -9, 89.4 ),
+		Ang = Angle( 2, 90, 0),
+		AutoPatterns = true,
+	},
+	[15] = {
+		ID = "Federal Signal Vision SLR Clear",
+		Scale = .98,
+		Pos = Vector( 0, -9, 89.4 ),
+		Ang = Angle( 2, 90, 0),
+		AutoPatterns = true,
+	},
 }
 
 EMV.Presets = {
-	// [1] = {
-	// 	Name = "Whelen Vertex",
-	// 	Bodygroups = {},
-	// 	Auto = { 1 },
-	// 	Props = {}
-	// },
 	[1] = {
 		Name = "Federal Signal Integrity",
 		Bodygroups = {
@@ -659,7 +706,7 @@ EMV.Presets = {
 		Bodygroups = {
 			{5, 0},
 		},
-		Auto = { 2, 8, 9, 10, 11 },
+		Auto = { 2, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
 	[3] = {
@@ -667,42 +714,58 @@ EMV.Presets = {
 		Bodygroups = {
 			{5, 0},
 		},
-		Auto = { 3, 8, 9, 10, 11 },
+		Auto = { 3, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
 	[4] = {
-		Name = "Federal Signal Vision SLR",
+		Name = "Federal Signal Vision SLR (NYPD)",
 		Bodygroups = {
 			{5, 0},
 		},
-		Auto = { 4, 8, 9, 10, 11 },
+		Auto = { 4, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
 	[5] = {
+		Name = "Federal Signal Vision SLR R/B",
+		Bodygroups = {
+			{5, 0},
+		},
+		Auto = { 14, 8, 9, 10, 11, 12 },
+		Props = {}
+	},
+	[6] = {
+		Name = "Federal Signal Vision SLR Clear",
+		Bodygroups = {
+			{5, 0},
+		},
+		Auto = { 15, 8, 9, 10, 11, 12 },
+		Props = {}
+	},
+	[7] = {
 		Name = "Whelen Justice",
 		Bodygroups = {
 			{5, 0},
 		},
-		Auto = { 5, 8, 9, 10, 11 },
+		Auto = { 5, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	[6] = {
+	[8] = {
 		Name = "Whelen Legacy",
 		Bodygroups = {
 			{5, 0},
 		},
-		Auto = { 6, 8, 9, 10, 11 },
+		Auto = { 6, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	[7] = {
+	[9] = {
 		Name = "Whelen Liberty",
 		Bodygroups = {
 			{5, 0},
 		},
-		Auto = { 7, 8, 9, 10, 11 },
+		Auto = { 7, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	[8] = {
+	[10] = {
 		Name = "Slicktop",
 		Bodygroups = {
 			{5, 0},
@@ -711,7 +774,7 @@ EMV.Presets = {
 		Auto = { 8, 9, 10, 11, 12, 13 },
 		Props = {}
 	},
-	[9] = {
+	[11] = {
 		Name = "Default",
 		Bodygroups = {
 			{5, 1},
@@ -723,16 +786,13 @@ EMV.Presets = {
 
 
 local V = {
-	// Required information
 	Name =	name,
 	Class = "prop_vehicle_jeep",
 	Category = "Emergency Vehicles",
 
-	// Optional information
 	Author = "LoneWolfie, Schmal",
 	Information = "vroom vroom",
 	Model =	"models/LoneWolfie/chev_tahoe.mdl",
-
 
 	KeyValues = {				
 			vehiclescript =	"scripts/vehicles/lwcars/chev_tahoe.txt"
@@ -745,4 +805,4 @@ local V = {
 
 list.Set( "Vehicles", V.Name, V )
 
-if EMVU then EMVU:OverwriteIndex( name, EMV ) end
+// if EMVU then EMVU:OverwriteIndex( name, EMV ) end

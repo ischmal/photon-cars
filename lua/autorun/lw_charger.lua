@@ -121,6 +121,13 @@ EMV.Sequences = {
 }
 
 EMV.Auto = {
+	[1] = {
+		ID = "Whelen 700",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0),
+		AutoPatterns = true,
+	},	
 	// [1] = {
 	// 	ID = "Federal Signal Integrity",
 	// 	Scale = .96,
@@ -182,12 +189,12 @@ EMV.Auto = {
 }
 
 EMV.Presets = {
-	// [1] = {
-	// 	Name = "Whelen Vertex",
-	// 	Bodygroups = {},
-	// 	Auto = { 1 },
-	// 	Props = {}
-	// },
+	[1] = {
+		Name = "Whelen 700",
+		Bodygroups = {},
+		Auto = { 1 },
+		Props = {}
+	},
 	// [1] = {
 	// 	Name = "Federal Signal Integrity",
 	// 	Bodygroups = {},
