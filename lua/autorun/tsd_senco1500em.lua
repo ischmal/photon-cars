@@ -13,18 +13,16 @@ local G = "GREEN"
 
 local EMV = {}
 
---util.PrecacheModel( "models/schmal/fedsig_visionslr/vision_lightbar.mdl" )
-
 EMV.Siren = 0
 
-EMV.Color = Color( 235, 235, 235 )
+EMV.Color = Color( 255, 255, 255 )
 
 EMV.Skin = 4
 
 EMV.BodyGroups = {
-	{ 2, 5 },
+	{ 2, 3 },
 	{ 10, 4 },
-	{ 16, 1 },
+	{ 16, 2 },
 	{ 15, 0 },
 	{ 8, 1 },
 	{ 4, 1 },
@@ -178,31 +176,13 @@ EMV.Auto = {
 		Color1 = "BLUE",
 		Phase = "B",
 	},
-	[6] = {
-		ID = "Whelen 700",
-		Scale = 1.1,
-		Pos = Vector( 33, -115.4, 82 ),
-		Ang = Angle( 0, 0, 90 ),
-		AutoPatterns = true,
-		Color1 = "BLUE",
-		Phase = "B",
-	},
-	[7] = {
-		ID = "Whelen 700",
-		Scale = 1.1,
-		Pos = Vector( -33, -115.4, 82 ),
-		Ang = Angle( 0, 0, 90 ),
-		AutoPatterns = true,
-		Color1 = "BLUE",
-		Phase = "A",
-	},
 }
 
 EMV.Presets = {
 	[1] = {
 		Name = "Federal Signal Integrity",
 		Bodygroups = {},
-		Auto = { 1, 2, 3, 4, 5, 6, 7 },
+		Auto = { 1, 2, 3, 4, 5 },
 		Props = {}
 	},
 }
