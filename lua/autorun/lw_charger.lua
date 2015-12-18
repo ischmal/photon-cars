@@ -122,12 +122,18 @@ EMV.Sequences = {
 
 EMV.Auto = {
 	[1] = {
-		ID = "Whelen 700",
+		ID = "Whelen CenCom Panel",
 		Scale = 1,
-		Pos = Vector( 0, 0, 0 ),
-		Ang = Angle( 0, 0, 0),
-		AutoPatterns = true,
-	},	
+		Pos = Vector(0, 0, 0),
+		Ang = Angle(0, 0, 0),
+	},
+	// [1] = {
+	// 	ID = "Tomar 200S Rear",
+	// 	Scale = 1,
+	// 	Pos = Vector( 0, 0, 0 ),
+	// 	Ang = Angle( 0, 0, 0),
+	// 	AutoPatterns = true,
+	// },	
 	// [1] = {
 	// 	ID = "Federal Signal Integrity",
 	// 	Scale = .96,
@@ -190,7 +196,7 @@ EMV.Auto = {
 
 EMV.Presets = {
 	[1] = {
-		Name = "Whelen 700",
+		Name = "Whelen Liberty II",
 		Bodygroups = {},
 		Auto = { 1 },
 		Props = {}

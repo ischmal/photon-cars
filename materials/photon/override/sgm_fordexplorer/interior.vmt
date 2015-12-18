@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "photon/override/sgm_fordexplorer/interior"
+
+	"$halflambert" 1
+	"$phong" "1" 
+	"$phongboost" "64" 
+	"$phongfresnelranges" "[4 1 4]"
+	"$nocull" "1"
+
+}

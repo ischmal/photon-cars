@@ -30,30 +30,23 @@ EMV.Sections = {}
 EMV.Patterns = {}
 
 EMV.Sequences = {
-		Sequences = {
+	Sequences = {
 		{
 			Name = "STAGE 1",
-			Stage = "M4",
-			Components = {},
-			Preset_Components = {},
-			Disconnect = {}
-		},
-		{
-			Name = "STAGE 2",
 			Stage = "M1",
 			Components = {	},
 			Preset_Components = {},
 			Disconnect = {}
 		},
 		{
-			Name = "STAGE 3",
+			Name = "STAGE 2",
 			Stage = "M2",
 			Components = {	},
 			Preset_Components = {},
 			Disconnect = {}
 		},
 		{
-			Name = "STAGE 4",
+			Name = "STAGE 3",
 			Stage = "M3",
 			Components = {	},
 			Preset_Components = {},
@@ -110,7 +103,7 @@ EMV.Lamps = {
 
 EMV.Auto = {
 	[1] = {
-		ID = "Whelen Legacy SenCo Front",
+		ID = "Whelen Liberty SX",
 		Scale = 1.02,
 		Pos = Vector( 0, 24, 109.6 ),
 		Ang = Angle( 0, 90, 0),
@@ -171,10 +164,10 @@ EMV.Auto = {
 		Phase = "A",
 	},
 	[8] = {
-		ID = "Whelen Legacy SenCo Rear",
-		Scale = 1.02,
+		ID = "Tomar 200S Rear",
+		Scale = .9,
 		Pos = Vector( 0, -94, 109.6 ),
-		Ang = Angle( 0, 90, 0),
+		Ang = Angle( 0, -90, 0),
 		AutoPatterns = true,
 	},
 }

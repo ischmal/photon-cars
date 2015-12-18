@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-local name = "Chevrolet Tahoe PPV"
+local name = "Chevrolet Tahoe Fire/Rescue"
 
 local A = "AMBER"
 local R = "RED"
@@ -16,18 +16,19 @@ EMV.Siren = 3
 
 EMV.Color = Color( 255, 255, 255 )
 
-EMV.Liveries = {
-	["Police"] = {
-		["Patrol"] = { "photon/emv_liveries/lw_tahoe/police-patrol", "pp" },
-		["K-9"] = { "photon/emv_liveries/lw_tahoe/police-k9", "pd" },
-		["Traffic"] = { "photon/emv_liveries/lw_tahoe/police-traffic", "pt" },
-		["Traffic (Stealth)"] = { "photon/emv_liveries/lw_tahoe/police-stealth", "pg" },
-		["Supervisor"] = { "photon/emv_liveries/lw_tahoe/police-supervisor", "ps" },
-		["S.W.A.T."] = { "photon/emv_liveries/lw_tahoe/police-swat", "pw" }
-	}
-}
+// EMV.Liveries = {
+// 	["Police"] = {
+// 		["Patrol"] = { "photon/emv_liveries/lw_tahoe/police-patrol", "pp" },
+// 		["K-9"] = { "photon/emv_liveries/lw_tahoe/police-k9", "pd" },
+// 		["Traffic"] = { "photon/emv_liveries/lw_tahoe/police-traffic", "pt" },
+// 		["Traffic (Stealth)"] = { "photon/emv_liveries/lw_tahoe/police-stealth", "pg" },
+		
+// 		["Supervisor"] = { "photon/emv_liveries/lw_tahoe/police-supervisor", "ps" },
+// 		["S.W.A.T."] = { "photon/emv_liveries/lw_tahoe/police-swat", "pw" }
+// 	}
+// }
 
-EMV.Skin = EMV.Liveries.Police.Patrol[1]
+EMV.Skin = "photon/emv_liveries/lw_tahoe/fire-regular"
 // EMV.Skin = 0
 
 EMV.BodyGroups = {
@@ -36,10 +37,10 @@ EMV.BodyGroups = {
 	{4, 1}, -- bullbar
 	{6, 1}, -- equipment
 	{7, 1}, -- grille
-	{8, 1}, -- massive fucking lamp
 	{9, 1}, -- lights front window
 	{10, 1}, -- lights grille
-	{13, 1}, -- partition
+--	{11, 1}, -- lights rear bumper
+--	{12, 1}, -- lights rear window
 	{17, 1}, -- wheels
 	{18, 1}, -- windows
 }
@@ -270,8 +271,8 @@ EMV.Sections = {
 	},
 	["front_window"] = {
 		{ { 34, R } },
-		{ { 33, B } },
-		{ { 33, B }, { 34, R } },
+		{ { 33, W } },
+		{ { 33, W }, { 34, R } },
 	},
 	["rear"] = {
 		{ { 23, A }, },
@@ -293,11 +294,11 @@ EMV.Sections = {
 	},
 	["grille"] = {
 		{ { 27, R } },
-		{ { 28, B } },
-		{ { 29, R } },
-		{ { 30, B } },
-		{ { 28, B }, { 27, R } },
-		{ { 30, B }, { 29, R } },
+		{ { 28, R } },
+		{ { 29, A } },
+		{ { 30, W } },
+		{ { 28, R }, { 27, R } },
+		{ { 30, W }, { 29, A } },
 	},
 	["takedown"] = {
 		{ { 1, W } },
@@ -312,8 +313,8 @@ EMV.Sections = {
 		{ { 38, R } },
 	},
 	["reverse_lights"] = { -- HIDEAWAYS MOTHERFUCKER
-		{ { 39, B } },
-		{ { 40, B } },
+		{ { 39, A } },
+		{ { 40, A } },
 	}
 }
 
@@ -582,6 +583,8 @@ EMV.Auto = {
 		Pos = Vector( 0, -9, 88.7 ),
 		Ang = Angle( 2, 90, 0),
 		AutoPatterns = true,
+		Color1 = "RED",
+		Color2 = "RED"
 	},	
 	[2] = {
 		ID = "Federal Signal Legend",
@@ -633,6 +636,7 @@ EMV.Auto = {
 		Pos = Vector( -41, -68, 65),
 		Ang = Angle( 0, 90, -90),
 		AutoPatterns = true,
+		Color3 = "AMBER"
 	},
 	[9] = {
 		ID = "Whelen 700 Trio",
@@ -640,13 +644,14 @@ EMV.Auto = {
 		Pos = Vector( 41, -68, 65),
 		Ang = Angle( 0, -90, -90 ),
 		AutoPatterns = true,
+		Color3 = "AMBER"
 	},
 	[10] = {
 		ID = "Whelen 700",
 		Scale = .66,
 		Pos = Vector( 11, -112.5, 50),
 		Ang = Angle( 0, 0, 90 ),
-		Color1 = "BLUE",
+		Color1 = "RED",
 		Phase = "A",
 		AutoPatterns = true,
 	},
@@ -665,6 +670,8 @@ EMV.Auto = {
 		Pos = Vector( 0, -101.5, 76.3),
 		Ang = Angle( 0, -90, 0 ),
 		AutoPatterns = true,
+		Color1 = "RED",
+		Color2 = "RED"
 	},
 	[13] = {
 		ID = "TDM Front Interior Lightbar",
@@ -687,17 +694,10 @@ EMV.Auto = {
 		Ang = Angle( 2, 90, 0),
 		AutoPatterns = true,
 	},
-	[16] = {
-		ID = "Federal Signal Arjent",
-		Scale = .82,
-		Pos = Vector( 0, -7, 88.2 ),
-		Ang = Angle( 2, 90, 0),
-		AutoPatterns = true,
-	},
 }
 
 EMV.Presets = {
-	{
+	[1] = {
 		Name = "Federal Signal Integrity",
 		Bodygroups = {
 			{5, 0},
@@ -705,7 +705,7 @@ EMV.Presets = {
 		Auto = { 1, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[2] = {
 		Name = "Federal Signal Legend",
 		Bodygroups = {
 			{5, 0},
@@ -713,7 +713,7 @@ EMV.Presets = {
 		Auto = { 2, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[3] = {
 		Name = "Federal Signal Valor",
 		Bodygroups = {
 			{5, 0},
@@ -721,15 +721,7 @@ EMV.Presets = {
 		Auto = { 3, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
-		Name = "Federal Signal Arjent",
-		Bodygroups = {
-			{5, 0},
-		},
-		Auto = { 16, 8, 9, 10, 11, 12 },
-		Props = {}
-	},
-	{
+	[4] = {
 		Name = "Federal Signal Vision SLR (NYPD)",
 		Bodygroups = {
 			{5, 0},
@@ -737,7 +729,7 @@ EMV.Presets = {
 		Auto = { 4, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[5] = {
 		Name = "Federal Signal Vision SLR R/B",
 		Bodygroups = {
 			{5, 0},
@@ -745,7 +737,7 @@ EMV.Presets = {
 		Auto = { 14, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[6] = {
 		Name = "Federal Signal Vision SLR Clear",
 		Bodygroups = {
 			{5, 0},
@@ -753,7 +745,7 @@ EMV.Presets = {
 		Auto = { 15, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[7] = {
 		Name = "Whelen Justice",
 		Bodygroups = {
 			{5, 0},
@@ -761,7 +753,7 @@ EMV.Presets = {
 		Auto = { 5, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[8] = {
 		Name = "Whelen Legacy",
 		Bodygroups = {
 			{5, 0},
@@ -769,7 +761,7 @@ EMV.Presets = {
 		Auto = { 6, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[9] = {
 		Name = "Whelen Liberty",
 		Bodygroups = {
 			{5, 0},
@@ -777,7 +769,7 @@ EMV.Presets = {
 		Auto = { 7, 8, 9, 10, 11, 12 },
 		Props = {}
 	},
-	{
+	[10] = {
 		Name = "Slicktop",
 		Bodygroups = {
 			{5, 0},
@@ -786,7 +778,7 @@ EMV.Presets = {
 		Auto = { 8, 9, 10, 11, 12, 13 },
 		Props = {}
 	},
-	{
+	[11] = {
 		Name = "Default",
 		Bodygroups = {
 			{5, 1},

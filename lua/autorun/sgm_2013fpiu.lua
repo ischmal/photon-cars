@@ -1,6 +1,8 @@
 AddCSLuaFile()
 
-local name = "2010 Ford Taurus Police Interceptor"
+EMV_DEBUG = false
+
+local name = "2013 Ford Police Interceptor Utility"
 
 local A = "AMBER"
 local R = "RED"
@@ -13,25 +15,29 @@ local G = "GREEN"
 
 local EMV = {}
 
-EMV.Siren = 44
+EMV.Siren = 3 -- SmartSiren
+// EMV.Siren = 3 -- SmartSiren
 
 EMV.Liveries = {
 	["Police"] = {
-		["Patrol"] = { "photon/emv_liveries/sgm_taurus/police-patrol", "pp" },
-		["K-9"] = { "photon/emv_liveries/sgm_taurus/police-traffic", "pd" },
-		["Traffic"] = { "photon/emv_liveries/sgm_taurus/police-traffic", "pt" },
-		["Traffic (Stealth)"] = { "photon/emv_liveries/sgm_taurus/police-traffic", "pg" },
-		["Unmarked"] = { "photon/emv_liveries/sgm_taurus/police-unmarked", "pu" },
+		// ["Patrol"] = { "photon/emv_liveries/sgm_taurus/police-patrol", "pp" },
+		// ["Patrol"] = { "photon/emv_liveries/sgm_taurus/lapd" },
+		// ["Traffic"] = { "photon/emv_liveries/sgm_taurus/police-traffic", "pt" }
 	}
 }
 
-EMV.Skin = "photon/emv_liveries/sgm_taurus/police-patrol"
+EMV.Skin = "photon/emv_liveries/sgm_explorer/police-patrol"
 
 EMV.Color = Color(255, 255, 255)
 
 EMV.BodyGroups = {
 	{5, 1}, -- equipment
 	{7, 1}, -- rims
+}
+
+EMV.SubMaterials = {
+	["7"] = "photon/override/sgm_fordexplorer/interior",
+	["13"] = "photon/override/sgm_fordexplorer/glass",
 }
 
 EMV.Props = {}
@@ -104,7 +110,7 @@ EMV.Patterns = { -- 0 = blank
 }
 
 EMV.Sequences = {
-	Sequences = {
+		Sequences = {
 		{
 			Name = "CODE 1",
 			Stage = "M1",
@@ -132,80 +138,56 @@ EMV.Sequences = {
 		{ Name = "DIVERGE", Stage = "D", Components = {}, Disconnect = {} },
 		{ Name = "RIGHT", Stage = "R", Components = {}, Disconnect = {} }
 	},
-	Illumination = {
-		{
-			Name = "TKDN",
-			Icon = "takedown",
-			Stage = "T",
-			Components = {},
-			BG_Components = {},
-			Preset_Components = {},
-			Lights = {
-				{ Vector( 0, 0, 75 ), Angle( 45, 90, 0 ), "takedown" },
-			},
-			Disconnect = {}
-		},
-	}
-}
-
-EMV.Lamps = {
-	["takedown"] = {
-		Color = Color(215,225,255,255),
-		Texture = "effects/flashlight001",
-		Near = 160,
-		FOV = 120,
-		Distance = 800,
-	},
 }
 
 EMV.Auto = {
 	[1] = {
 		ID = "Federal Signal Integrity",
-		Scale = .92,
-		Pos = Vector( 0, -8, 75 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = 1,
+		Pos = Vector( 0, -10.4, 84.5 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},	
 	[2] = {
 		ID = "Federal Signal Legend",
-		Scale = .94,
-		Pos = Vector( 0, -7, 76 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = 1.05,
+		Pos = Vector( 0, -8.5, 85.5 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[3] = {
 		ID = "Federal Signal Valor",
-		Scale = .83,
-		Pos = Vector( 0, -4, 75.7 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = .95,
+		Pos = Vector( 0, -4, 85.2 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[4] = {
 		ID = "Federal Signal Vision SLR",
-		Scale = .87,
-		Pos = Vector( 0, -9, 75.7 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = 1.03,
+		Pos = Vector( 0, -10.5, 85.2 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[5] = {
 		ID = "Whelen Justice",
-		Scale = .95,
-		Pos = Vector( 0, -6.8, 76.8 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = 1.06,
+		Pos = Vector( 0, -7.1, 86.2 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[6] = {
 		ID = "Whelen Legacy",
-		Scale = .93,
-		Pos = Vector( 0, -7, 75.1 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = 1.04,
+		Pos = Vector( 0, -8, 84.2 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[7] = {
 		ID = "Whelen Liberty SX",
-		Scale = .88,
-		Pos = Vector( 0, -7, 75 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = .98,
+		Pos = Vector( 0, -8, 84.6 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[8] = {
@@ -217,60 +199,58 @@ EMV.Auto = {
 	},
 	[9] = {
 		ID = "TDM Front Interior Lightbar",
-		Scale = 1,
-		Pos = Vector( 0, 28, 65),
+		Scale = 1.12,
+		Pos = Vector( 0, 30, 73),
 		Ang = Angle( 0, 90, 0 ),
 		AutoPatterns = true,
-		Color1 = "BLUE",
-		Color2 = "RED"
 	},
 	[10] = {
 		ID = "Federal Signal Vision SLR R/B",
-		Scale = .87,
-		Pos = Vector( 0, -9, 75.7 ),
-		Ang = Angle( 2, 90, 0),
+		Scale = 1.03,
+		Pos = Vector( 0, -10.5, 85.2 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[11] = {
-		ID = "Federal Signal Vision SLR Clear",
-		Scale = .87,
-		Pos = Vector( 0, -9, 75.7 ),
-		Ang = Angle( 2, 90, 0),
+		ID = "Federal Signal Vision SLR Amber",
+		Scale = 1.03,
+		Pos = Vector( 0, -10.5, 85.2 ),
+		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[12] = {
 		ID = "TDM Pushbar LED",
-		Scale = .98,
-		Pos = Vector( 0, 120, 15 ),
+		Scale = 1.15,
+		Pos = Vector( 0, 122.5, 15 ),
 		Ang = Angle( 0, -90, 0),
 		AutoPatterns = true,
 	},
 	[13] = {
 		ID = "Whelen 700 Trio",
 		Scale = 1.1,
-		Pos = Vector( -35, -43, 56.2),
-		Ang = Angle( 3, 90, -80),
+		Pos = Vector( -39, -80, 62.5),
+		Ang = Angle( 0, 95, -90),
 		AutoPatterns = true,
 	},
 	[14] = {
 		ID = "Whelen 700 Trio",
 		Scale = 1.1,
-		Pos = Vector( 35, -43, 56.2),
-		Ang = Angle( 3, 90, 80),
+		Pos = Vector( 39, -80, 62.5),
+		Ang = Angle( 0, 85, 90),
 		AutoPatterns = true,
 	},
 	[15] = {
 		ID = "Whelen Vertex",
 		Scale = 1,
-		Pos = Vector( -43, 92, 30),
-		Ang = Angle( -45, -100, 70 ),
+		Pos = Vector( -45.6, 97, 30),
+		Ang = Angle( -70, -100, 80 ),
 		AutoPatterns = true
 	},
 	[16] = {
 		ID = "Whelen Vertex",
 		Scale = 1,
-		Pos = Vector( 43, 92, 30),
-		Ang = Angle( -45, -80, -70 ),
+		Pos = Vector( 45.6, 97, 30),
+		Ang = Angle( -70, -80, -80 ),
 		AutoPatterns = true
 	},
 	[17] = {
@@ -296,8 +276,8 @@ EMV.Auto = {
 	[19] = {
 		ID = "Whelen Vertex",
 		Scale = 1,
-		Pos = Vector( -11.5, -119.4, 26.1),
-		Ang = Angle( 0, -7, 90 ),
+		Pos = Vector( -15, -119.4, 23),
+		Ang = Angle( 0, -10, 90 ),
 		AutoPatterns = true,
 		Color1 = "RED",
 		Phase = "A"
@@ -305,8 +285,8 @@ EMV.Auto = {
 	[20] = {
 		ID = "Whelen Vertex",
 		Scale = 1,
-		Pos = Vector( 11.5, -119.4, 26.1),
-		Ang = Angle( 0, 7, 90 ),
+		Pos = Vector( 15, -119.4, 23),
+		Ang = Angle( 0, 10, 90 ),
 		AutoPatterns = true,
 		Color1 = "BLUE",
 		Phase = "B"
@@ -314,8 +294,8 @@ EMV.Auto = {
 	[21] = {
 		ID = "Federal Signal Viper",
 		Scale = 1,
-		Pos = Vector( 23, 27.2, 64),
-		Ang = Angle( 0, 80, 4 ),
+		Pos = Vector( 29, 29.62, 72),
+		Ang = Angle( 0, 85, 2 ),
 		AutoPatterns = true,
 		Color1 = "BLUE",
 		Color2 = "WHITE",
@@ -324,85 +304,65 @@ EMV.Auto = {
 	[22] = {
 		ID = "Federal Signal Viper",
 		Scale = 1,
-		Pos = Vector( -23, 27.2, 64),
-		Ang = Angle( 0, 100, -4 ),
+		Pos = Vector( -29, 29.6, 72),
+		Ang = Angle( 0, 95, -2 ),
 		AutoPatterns = true,
 		Color1 = "RED",
 		Color2 = "WHITE",
 		Phase = "B"
 	},
 	[23] = {
-		ID = "Whelen Legacy",
-		Scale = 1.06,
-		Pos = Vector( 0, -7.5, 88.2 ),
+		ID = "Federal Signal Arjent",
+		Scale = .85,
+		Pos = Vector( 0, -7.5, 84.3 ),
 		Ang = Angle( 2, 90, 0),
 		AutoPatterns = true,
 	},
 	[24] = {
-		ID = "Federal Signal Arjent",
-		Scale = .78,
-		Pos = Vector( 0, -6.4, 74.6 ),
-		Ang = Angle( 2, 90, 0),
+		ID = "TDM Rear Interior Lightbar",
+		Scale = .8,
+		Pos = Vector( 0, -99, 73),
+		Ang = Angle( 0, -90, 0 ),
 		AutoPatterns = true,
 	},
 	[25] = {
-		ID = "Federal Signal Viper Dual",
+		ID = "Whelen Ultra Freedom",
 		Scale = 1,
-		Pos = Vector( 23, 27.2, 64),
-		Ang = Angle( 0, 80, 4 ),
-		AutoPatterns = true,
-		Color1 = "BLUE",
-		Color2 = "BLUE",
-		Phase = "A"
+		Pos = Vector( 0, -8.1, 86.2 ),
+		Ang = Angle( 1, 90, 0),
+		AutoPatterns = true
 	},
-	[26] = {
-		ID = "Federal Signal Viper Dual",
-		Scale = 1,
-		Pos = Vector( -23, 27.2, 64),
-		Ang = Angle( 0, 100, -4 ),
-		AutoPatterns = true,
-		Color1 = "RED",
-		Color2 = "RED",
-		Phase = "B"
-	}
-		
 }
 
 EMV.Presets = {
 	{
 		Name = "Federal Signal Integrity",
 		Bodygroups = {},
-		Auto = { 1, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 1, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
 		Name = "Federal Signal Legend",
 		Bodygroups = {},
-		Auto = { 2, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 2, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
 		Name = "Federal Signal Valor",
 		Bodygroups = {},
-		Auto = { 3, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
-		Props = {}
-	},
-	{
-		Name = "Federal Signal Arjent",
-		Bodygroups = {},
-		Auto = { 24, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 3, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
 		Name = "Federal Signal Vision SLR (NYPD)",
 		Bodygroups = {},
-		Auto = { 4, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 4, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
 		Name = "Federal Signal Vision SLR R/B",
 		Bodygroups = {},
-		Auto = { 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 10, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
@@ -410,7 +370,13 @@ EMV.Presets = {
 		Bodygroups = {
 			
 		},
-		Auto = { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
+		Props = {}
+	},
+	{
+		Name = "Federal Signal Arjent",
+		Bodygroups = {},
+		Auto = { 12, 12, 13, 14, 15, 16, 19, 20, 24, 21, 22, 24 },
 		Props = {}
 	},
 	{
@@ -418,7 +384,7 @@ EMV.Presets = {
 		Bodygroups = {
 			
 		},
-		Auto = { 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 5, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
@@ -426,7 +392,7 @@ EMV.Presets = {
 		Bodygroups = {
 			
 		},
-		Auto = { 6, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 6, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
@@ -434,7 +400,15 @@ EMV.Presets = {
 		Bodygroups = {
 			
 		},
-		Auto = { 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 },
+		Auto = { 7, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
+		Props = {}
+	},
+	{
+		Name = "Whelen Ultra Freedom",
+		Bodygroups = {
+			
+		},
+		Auto = { 25, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 	{
@@ -442,7 +416,7 @@ EMV.Presets = {
 		Bodygroups = {
 
 		},
-		Auto = { 25, 26, 12, 13, 14, 15, 16, 17, 18, 19, 20 },
+		Auto = { 9, 12, 13, 14, 15, 16, 19, 20, 21, 22, 24 },
 		Props = {}
 	},
 }
@@ -455,18 +429,18 @@ local V = {
 
 				// Optional information
 				Author = "SentryGunMan, Schmal",
-				Information = "vroom vroom",
-				Model =	"models/sentry/taurussho.mdl",
+				-- Model =	"models/schmal/fpiu/fpiu_high.mdl",
+				Model =	"models/sentry/explorer.mdl",
 
 			
 				KeyValues = {				
-					vehiclescript =	"scripts/vehicles/sentry/taurus.txt"
+					vehiclescript =	"scripts/vehicles/sentry/explorer.txt"
 			    },
 					    
 				IsEMV = true,
 				EMV = EMV,
 				HasPhoton = true,
-				Photon = "sgm_taurus"
+				Photon = "sgm_explorer"
 }
 
 list.Set( "Vehicles", V.Name, V )

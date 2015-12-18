@@ -1,4 +1,4 @@
-local name = "TDM Charger"
+local name = "DC Metro Police Charger"
 
 local A = "AMBER"
 local R = "RED"
@@ -10,7 +10,7 @@ local SW = "S_WHITE"
 
 local EMV = {}
 
-EMV.Siren = 7
+EMV.Siren = 8
 
 EMV.Color = nil
 EMV.Skin = 0

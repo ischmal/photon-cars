@@ -22,13 +22,27 @@ EMV.Color = Color( 235, 235, 235 )
 EMV.Skin = 4
 
 EMV.BodyGroups = {
-	{ 2, 5 },
-	{ 10, 4 },
-	{ 16, 1 },
-	{ 15, 0 },
-	{ 8, 1 },
-	{ 4, 1 },
+	{ 0, 0 }, -- Body
+	{ 1, 0 }, -- Ariels
+	{ 2, 3 }, -- Bed
+	{ 3, 0 }, -- Nothing
+	{ 4, 0 }, -- Bullbar
+	{ 5, 0 }, -- Bumpers
+	{ 6, 2 }, -- Chromestrip
+	{ 7, 3 }, -- Grill
+	{ 8, 1 }, -- Mirrors
+	{ 9, 0 }, -- Mudguards
+	{ 10, 4 }, -- Runningboards
+	{ 11, 0 }, -- Roof
+	{ 12, 0 }, -- Snorkel
+	{ 13, 1 }, -- Skirt
+	{ 14, 0 }, -- Tailgate
+	{ 15, 0 }, -- Wheelarches
+	{ 16, 2 }, -- Wheels
+	{ 17, 0 }, -- clamped1
+	{ 18, 0 }, -- clamped2
 }
+
 
 EMV.Props = {}
 
@@ -134,31 +148,49 @@ EMV.Lamps = {
 
 EMV.Auto = {
 	[1] = {
-		ID = "Federal Signal Integrity SenCo",
-		Scale = 1.02,
-		Pos = Vector( 0, 16, 93 ),
+		ID = "Federal Signal Vision SLR Amber",
+		Scale = 1.05,
+		Pos = Vector( 0, 16, 93.8 ),
 		Ang = Angle( 1, 90, 0),
 		AutoPatterns = true,
 	},
 	[2] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
-		Pos = Vector( 10, 143.2, 44 ),
-		Ang = Angle( 0, -6, -90 ),
+		Pos = Vector( 7.5, 145, 47.9 ),
+		Ang = Angle( 0, -4, -90 ),
 		AutoPatterns = true,
-		Color1 = "AMBER",
+		Color1 = "WHITE",
 		Phase = "A",
 	},
 	[3] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
-		Pos = Vector( -10, 143.2, 44 ),
-		Ang = Angle( 0, 6, -90 ),
+		Pos = Vector( -7.5, 145, 47.9 ),
+		Ang = Angle( 0, 4, -90 ),
+		AutoPatterns = true,
+		Color1 = "AMBER",
+		Phase = "A",
+	},
+	[4] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( 13, 144.4, 47.9 ),
+		Ang = Angle( 0, -8, -90 ),
 		AutoPatterns = true,
 		Color1 = "AMBER",
 		Phase = "B",
 	},
-	[4] = {
+	[5] = {
+		ID = "Whelen 700",
+		Scale = 1.1,
+		Pos = Vector( -13, 144.4, 47.9 ),
+		Ang = Angle( 0, 8, -90 ),
+		AutoPatterns = true,
+		Color1 = "WHITE",
+		Phase = "B",
+	},
+	[6] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
 		Pos = Vector( 19, -125, 32 ),
@@ -167,7 +199,7 @@ EMV.Auto = {
 		Color1 = "AMBER",
 		Phase = "A",
 	},
-	[5] = {
+	[7] = {
 		ID = "Whelen 700",
 		Scale = 1.1,
 		Pos = Vector( -19, -125, 32 ),
@@ -176,29 +208,11 @@ EMV.Auto = {
 		Color1 = "AMBER",
 		Phase = "B",
 	},
-	[6] = {
-		ID = "Whelen 700",
-		Scale = 1.1,
-		Pos = Vector( 33, -115.4, 82 ),
-		Ang = Angle( 0, 0, 90 ),
-		AutoPatterns = true,
-		Color1 = "GREEN",
-		Phase = "B",
-	},
-	[7] = {
-		ID = "Whelen 700",
-		Scale = 1.1,
-		Pos = Vector( -33, -115.4, 82 ),
-		Ang = Angle( 0, 0, 90 ),
-		AutoPatterns = true,
-		Color1 = "GREEN",
-		Phase = "A",
-	},
 }
 
 EMV.Presets = {
 	[1] = {
-		Name = "Federal Signal Integrity",
+		Name = "Federal Signal Vision SLR",
 		Bodygroups = {},
 		Auto = { 1, 2, 3, 4, 5, 6, 7 },
 		Props = {}
