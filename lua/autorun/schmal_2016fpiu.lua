@@ -1197,5 +1197,5 @@ local V = {
 
 list.Set( "Vehicles", V.Name, V )
 
-if EMVU then EMVU:OverwriteIndex( name, EMV ) end
+--if EMVU then EMVU:OverwriteIndex( name, EMV ) end
 -- if PI then Photon:OverwriteIndex( name, PI ) endxx
