@@ -17,15 +17,11 @@ local EMV = {}
 
 EMV.Siren = 46
 
-EMV.Skin = "fpiu16_liveries/Blank"
+-- EMV.Skin = "fpiu16_liveries/Blank"
 
 EMV.Color = Color(255, 255, 255)
 
 EMV.BodyGroups = {}
-
-EMV.SubMaterials = {
-
-}
 
 EMV.Props = {
 	[1] = {
@@ -1918,3 +1914,27 @@ list.Set( "Vehicles", V.Name, V )
 
 --if EMVU then EMVU:OverwriteIndex( name, EMV ) end
 -- if PI then Photon:OverwriteIndex( name, PI ) endxx
+
+CreateClientConVar( "photon_nowarn", "0", true )
+
+hook.Add( "InitPostEntity", "FPIU16PhotonCheck", function()
+	local nowarn = GetConVar( "photon_nowarn" )
+	if not PHOTON_UPDATE then
+		if game.SinglePlayer() and not nowarn:GetBool() and CLIENT then
+			timer.Simple( 5, function() 
+				chat.AddText( Color( 255, 0, 0 ), "WARNING: ", Color( 255, 128, 0 ), tostring( name ) .. " requires Photon Lighting Engine to function properly. Please subscribe in the following window. To disable this warning, type \"photon_nowarn 1\" into console.")
+			end)
+			timer.Simple( 10, function()
+				gui.OpenURL( "http://steamcommunity.com/sharedfiles/filedetails/?id=339648087" )
+			end)
+		elseif SERVER then
+			print( "CRITICAL WARNING: " .. tostring( name ) .. " requires Photon Lighting Engine to function properly. Please visit https://photon.lighting/ and follow the link to the Workshop download." )
+		end
+	elseif isnumber( PHOTON_UPDATE ) and 51 > PHOTON_UPDATE then
+		if game.SinglePlayer() and CLIENT then
+			chat.AddText( Color( 255, 0, 0 ), "WARNING: ", Color( 255, 128, 0 ), tostring( name ) .. "requires Photon Lighting Engine version 51 or newer. Please ensure to download the latest files or subscribe to the Workshop. Visit https://photon.lighting/ for more information.")
+		elseif SERVER then
+			print( "CRITICAL WARNING: " .. tostring( name ) .. " requires Photon Lighting Engine version 51 or newer. Please ensure the latest files are downloaded or Workshop addons are correctly configured." )
+		end
+	end
+end)
