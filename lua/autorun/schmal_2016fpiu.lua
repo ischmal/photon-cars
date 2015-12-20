@@ -329,7 +329,7 @@ EMV.Sequences = {
 		},
 		{
 			Name = "LEFT",
-			Icon = "left",
+			Icon = "alley-left",
 			Stage = "L",
 			Components = {},
 			BG_Components = {},
@@ -341,7 +341,7 @@ EMV.Sequences = {
 		},
 		{
 			Name = "RIGHT",
-			Icon = "right",
+			Icon = "alley-right",
 			Stage = "R",
 			Components = {},
 			BG_Components = {},
@@ -396,75 +396,65 @@ EMV.Auto = {
 		Scale = 1,
 		Pos = Vector( 0, -10.4, 82 ),
 		Ang = Angle( 1, 90, 0),
-		AutoPatterns = true,
 	},	
 	[2] = {
 		ID = "Federal Signal Legend",
 		Scale = 1.05,
 		Pos = Vector( 0, -8.5, 83 ),
 		Ang = Angle( 1, 90, 0),
-		AutoPatterns = true,
 	},
 	[3] = {
 		ID = "Federal Signal Valor",
 		Scale = .93,
 		Pos = Vector( 0, -4, 83.6 ),
-		Ang = Angle( 1.7, 90, 0),
-		AutoPatterns = true,
-		Phase = "A"
+		Ang = Angle( 1.7, 90, 0)
 	},
 	[4] = {
 		ID = "Federal Signal Vision SLR",
 		Scale = .90,
-		Pos = Vector( 0, -10.5, 84.2 ),
+		Pos = Vector( 0, -10.5, 84.4 ),
 		Ang = Angle( 1, 90, 0),
-		AutoPatterns = true,
 	},
 	[5] = {
 		ID = "Whelen Justice",
 		Scale = 1.06,
 		Pos = Vector( 0, -7.1, 84 ),
 		Ang = Angle( 1, 90, 0),
-		AutoPatterns = true,
 	},
 	[6] = {
 		ID = "Whelen Legacy",
 		Scale = 1.04,
 		Pos = Vector( 0, -8.6, 82.4 ),
 		Ang = Angle( 1.7, 90, 0),
-		AutoPatterns = true,
 	},
 	[7] = {
 		ID = "Whelen Liberty SX",
 		Scale = .98,
 		Pos = Vector( 0, -8, 83 ),
 		Ang = Angle( 1, 90, 0),
-		AutoPatterns = true,
 	},
 	[8] = {
 		ID = "TDM Rear Interior Lightbar",
 		Scale = .95,
 		Pos = Vector( 0, -82, 60),
 		Ang = Angle( 0, -90, 0 ),
-		AutoPatterns = true,
 	},
 	[9] = {
 		ID = "TDM Front Interior Lightbar",
 		Scale = 1.12,
 		Pos = Vector( 0, 28.1, 71.4),
 		Ang = Angle( 0, 90, 0 ),
-		AutoPatterns = true,
 	},
 	[10] = {
 		ID = "Federal Signal Vision SLR R/B",
 		Scale = .90,
-		Pos = Vector( 0, -10.5, 84.2 ),
+		Pos = Vector( 0, -10.5, 84.4 ),
 		Ang = Angle( 1, 90, 0),
 	},
 	[11] = {
 		ID = "Federal Signal Vision SLR Clear",
 		Scale = .90,
-		Pos = Vector( 0, -10.5, 84.2 ),
+		Pos = Vector( 0, -10.5, 84.4 ),
 		Ang = Angle( 1, 90, 0),
 	},
 	[12] = {
@@ -472,21 +462,18 @@ EMV.Auto = {
 		Scale = 1.15,
 		Pos = Vector( 0, 116, 17 ),
 		Ang = Angle( 0, -90, 0),
-		AutoPatterns = true,
 	},
 	[13] = {
 		ID = "Whelen 700 Trio",
 		Scale = 1.1,
 		Pos = Vector( -39, -80, 62.5),
 		Ang = Angle( 0, 95, -90),
-		AutoPatterns = true,
 	},
 	[14] = {
 		ID = "Whelen 700 Trio",
 		Scale = 1.1,
 		Pos = Vector( 39, -80, 62.5),
 		Ang = Angle( 0, 85, 90),
-		AutoPatterns = true,
 	},
 	[15] = {
 		ID = "Whelen Vertex",
@@ -507,7 +494,6 @@ EMV.Auto = {
 		Scale = 1,
 		Pos = Vector( 22, -92, 72.5),
 		Ang = Angle( 0, -80, 0 ),
-		AutoPatterns = true,
 		Color1 = "BLUE",
 		Color2 = "BLUE",
 		Phase = "A"
@@ -517,7 +503,6 @@ EMV.Auto = {
 		Scale = 1,
 		Pos = Vector( -22, -92, 72.5),
 		Ang = Angle( 0, -100, 0 ),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Color2 = "RED",
 		Phase = "B"
@@ -527,7 +512,6 @@ EMV.Auto = {
 		Scale = 1,
 		Pos = Vector( -15, -119.4, 23),
 		Ang = Angle( 0, -10, 90 ),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Phase = "A"
 	},
@@ -536,16 +520,14 @@ EMV.Auto = {
 		Scale = 1,
 		Pos = Vector( 15, -119.4, 23),
 		Ang = Angle( 0, 10, 90 ),
-		AutoPatterns = true,
 		Color1 = "BLUE",
 		Phase = "B"
 	},
 	[21] = {
 		ID = "Federal Signal Viper",
 		Scale = 1,
-		Pos = Vector( 29, 29.62, 72),
+		Pos = Vector( 26, 29.62, 69),
 		Ang = Angle( 0, 85, 2 ),
-		AutoPatterns = true,
 		Color1 = "BLUE",
 		Color2 = "WHITE",
 		Phase = "A"
@@ -553,9 +535,8 @@ EMV.Auto = {
 	[22] = {
 		ID = "Federal Signal Viper",
 		Scale = 1,
-		Pos = Vector( -29, 29.6, 72),
+		Pos = Vector( -26, 29.6, 69),
 		Ang = Angle( 0, 95, -2 ),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Color2 = "WHITE",
 		Phase = "B"
@@ -565,14 +546,12 @@ EMV.Auto = {
 		Scale = .85,
 		Pos = Vector( 0, -7.5, 84.3 ),
 		Ang = Angle( 2, 90, 0),
-		AutoPatterns = true,
 	},
 	[24] = {
 		ID = "TDM Rear Interior Lightbar",
 		Scale = .9,
 		Pos = Vector( 0, -94, 72.9),
 		Ang = Angle( 0, -90, 0 ),
-		AutoPatterns = true,
 	},
 	[25] = {
 		ID = "Whelen Ultra Freedom",
@@ -602,7 +581,6 @@ EMV.Auto = {
 		Scale = 1.15,
 		Pos = Vector( 0, 118, 17 ),
 		Ang = Angle( 0, -90, 0),
-		AutoPatterns = true,
 		Color1 = "BLUE",
 		Color2 = "BLUE"
 	},
@@ -611,7 +589,6 @@ EMV.Auto = {
 		Scale = 1.15,
 		Pos = Vector( 0, 118, 17 ),
 		Ang = Angle( 0, -90, 0),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Color2 = "RED"
 	},
@@ -636,35 +613,30 @@ EMV.Auto = {
 		Scale = 1.1,
 		Pos = Vector( 0, -8.6, 83 ),
 		Ang = Angle( 1.7, 90, 0),
-		AutoPatterns = true,
 	},
 	[33] = {
 		ID = "Code 3 RX2700",
 		Scale = .96,
 		Pos = Vector( 0, -8.6, 83 ),
 		Ang = Angle( 1.7, 90, 0),
-		AutoPatterns = true,
 	},
 	[34] = {
 		ID = "Whelen Ion Split",
 		Scale = .66,
 		Pos = Vector( 7.8, 107.8, 44.4 ),
 		Ang = Angle( 0, -6, 10 ),
-		AutoPatterns = true,
 	},
 	[35] = {
 		ID = "Whelen Ion Split",
 		Scale = .66,
 		Pos = Vector( -7.8, 107.8, 44.4 ),
 		Ang = Angle( 0, 6, 10 ),
-		AutoPatterns = true,
 	},
 	[36] = {
 		ID = "Whelen Ion",
 		Scale = .66,
 		Pos = Vector( 7.8, 107.8, 44.4 ),
 		Ang = Angle( 0, -6, 10 ),
-		AutoPatterns = true,
 		Color1 = "BLUE",
 		Phase = "A"
 	},
@@ -673,7 +645,6 @@ EMV.Auto = {
 		Scale = .66,
 		Pos = Vector( -7.8, 107.8, 44.4 ),
 		Ang = Angle( 0, 6, 10 ),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Phase = "B"
 	},
@@ -682,7 +653,6 @@ EMV.Auto = {
 		Scale = .8,
 		Pos = Vector( 49.6, 37.8, 59.4 ),
 		Ang = Angle( 0, -25, 2 ),
-		AutoPatterns = true,
 		Color1 = "BLUE",
 		Phase = "A"
 	},
@@ -691,7 +661,6 @@ EMV.Auto = {
 		Scale = .8,
 		Pos = Vector( -49.6, 37.8, 59.4 ),
 		Ang = Angle( 0, 25, 2 ),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Phase = "B"
 	},
@@ -728,7 +697,7 @@ EMV.Auto = {
 	},
 	[45] = {
 		ID = "Whelen Ion Trio",
-		Scale = .66,
+		Scale = .75,
 		Pos = Vector( 10.5, 116.6, 48.2 ),
 		Ang = Angle( 0, 0, 0 ),
 		Phase = "B"
@@ -798,7 +767,6 @@ EMV.Auto = {
 		Scale = .8,
 		Pos = Vector( 49.6, 37.8, 59.4 ),
 		Ang = Angle( 0, -25, 2 ),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Phase = "CHPB"
 	},
@@ -807,7 +775,6 @@ EMV.Auto = {
 		Scale = .8,
 		Pos = Vector( -49.6, 37.8, 59.4 ),
 		Ang = Angle( 0, 25, 2 ),
-		AutoPatterns = true,
 		Color1 = "RED",
 		Phase = "CHPA"
 	},
@@ -854,13 +821,844 @@ EMV.Auto = {
 		Pos = Vector(.35, 30.98, 37.5),
 		Ang = Angle(0, 0, 5),
 	},
+	[63] = {
+		ID = "Code 3 RX2700 Blue",
+		Scale = .96,
+		Pos = Vector( 0, -8.6, 83 ),
+		Ang = Angle( 1.7, 90, 0),
+	},
+	[64] = {
+		ID = "Code 3 RX2700 Red",
+		Scale = .96,
+		Pos = Vector( 0, -8.6, 83 ),
+		Ang = Angle( 1.7, 90, 0),
+	},
+	[65] = {
+		ID = "Code 3 RX2700 MC",
+		Scale = .96,
+		Pos = Vector( 0, -8.6, 83 ),
+		Ang = Angle( 1.7, 90, 0),
+	},
+	[66] = {
+		ID = "Whelen Vertex",
+		Scale = 1,
+		Pos = Vector(35.68, -107, 25.89),
+		Ang = Angle(0, 48.51, 96.37)
+	},
+	[67] = {
+		ID = "Whelen Vertex",
+		Scale = 1,
+		Pos = Vector(-35.68, -107, 25.89),
+		Ang = Angle(0, -48.51, 96.37)
+	},
+	[68] = {
+		ID = "Whelen 700 Trio",
+		Scale = .7,
+		Pos = Vector(-23, -109.6, 51),
+		Ang = Angle(0, -15, 90),
+		Phase = "A",
+		Color2 = "BLUE",
+		Color3 = "WHITE"
+	},
+	[69] = {
+		ID = "Whelen 700 Trio",
+		Scale = .7,
+		Pos = Vector(23, -109.6, 51),
+		Ang = Angle(0, 15, 90),
+		Phase = "B",
+		Color2 = "BLUE",
+		Color3 = "WHITE"
+	},
+	[70] = {
+		ID = "Whelen Vertex",
+		Scale = 1,
+		Pos = Vector(20.13, 118.46, 41.38),
+		Ang = Angle(0, -90, -90)
+	},
+	[71] = {
+		ID = "Whelen Vertex",
+		Scale = 1,
+		Pos = Vector(-20.13, 118.46, 41.38),
+		Ang = Angle(0, 90, -90)
+	},
+	[72] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 26, 28.6, 70),
+		Ang = Angle( 0, 85, 2 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE",
+		Phase = "A"
+	},
+	[73] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -26, 28.6, 70),
+		Ang = Angle( 0, 95, -2 ),
+		Color1 = "RED",
+		Color2 = "RED",
+		Phase = "B"
+	},
+	[74] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 0, 52, 58),
+		Ang = Angle( 0, 90, 0 ),
+		Phase = "C",
+		Color1 = "RED",
+		Color2 = "BLUE"
+	},
+	[75] = {
+		ID = "Whelen Ion Split",
+		Scale = .75,
+		Pos = Vector( -10.5, 116.6, 48.2 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "RED",
+		Color2 = "BLUE"
+	},
+	[76] = {
+		ID = "Whelen Ion Split",
+		Scale = .75,
+		Pos = Vector( 10.5, 116.6, 48.2 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "BLUE",
+		Color2 = "RED"
+	},
+	[77] = {
+		ID = "Whelen Ion Split",
+		Scale = .75,
+		Pos = Vector( -10.5, 116.6, 48.2 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "RED",
+		Color2 = "WHITE"
+	},
+	[78] = {
+		ID = "Whelen Ion Split",
+		Scale = .75,
+		Pos = Vector( 10.5, 116.6, 48.2 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "WHITE",
+		Color2 = "RED"
+	},
+	[79] = {
+		ID = "Whelen Ion Split",
+		Scale = .75,
+		Pos = Vector( -10.5, 116.6, 48.2 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "BLUE",
+		Color2 = "WHITE"
+	},
+	[80] = {
+		ID = "Whelen Ion Split",
+		Scale = .75,
+		Pos = Vector( 10.5, 116.6, 48.2 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "WHITE",
+		Color2 = "BLUE"
+	},
+	[81] = {
+		ID = "FPIU16 Foglights",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[82] = {
+		ID = "FPIU16 Foglights",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[83] = {
+		ID = "Whelen Ion",
+		Scale = .66,
+		Pos = Vector( 7.8, 107.8, 44.4 ),
+		Ang = Angle( 0, -6, 10 ),
+		Color1 = "BLUE",
+		Phase = "A"
+	},
+	[84] = {
+		ID = "Whelen Ion",
+		Scale = .66,
+		Pos = Vector( -7.8, 107.8, 44.4 ),
+		Ang = Angle( 0, 6, 10 ),
+		Color1 = "BLUE",
+		Phase = "B"
+	},
+	[85] = {
+		ID = "Whelen Ion",
+		Scale = .66,
+		Pos = Vector( 7.8, 107.8, 44.4 ),
+		Ang = Angle( 0, -6, 10 ),
+		Color1 = "RED",
+		Phase = "A"
+	},
+	[86] = {
+		ID = "Whelen Ion",
+		Scale = .66,
+		Pos = Vector( -7.8, 107.8, 44.4 ),
+		Ang = Angle( 0, 6, 10 ),
+		Color1 = "RED",
+		Phase = "B"
+	},
+	[87] = {
+		ID = "Whelen Ion",
+		Scale = .66,
+		Pos = Vector( 7.8, 107.8, 44.4 ),
+		Ang = Angle( 0, -6, 10 ),
+		Color1 = "RED",
+		Phase = "NYPDA"
+	},
+	[88] = {
+		ID = "Whelen Ion",
+		Scale = .66,
+		Pos = Vector( -7.8, 107.8, 44.4 ),
+		Ang = Angle( 0, 6, 10 ),
+		Color1 = "RED",
+		Phase = "NYPDB"
+	},
+	[89] = {
+		ID = "FPIU16 Front Hideaway",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[90] = {
+		ID = "FPIU16 Front Hideaway",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[91] = {
+		ID = "FPIU16 Front Hideaway",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "WHITE",
+		Color2 = "WHITE"
+	},
+	[92] = {
+		ID = "FPIU16 Reverse Hideaways",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[93] = {
+		ID = "FPIU16 Reverse Hideaways",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[94] = {
+		ID = "FPIU16 Reverse Hideaways",
+		Scale = 1,
+		Pos = Vector( 0, 0, 0 ),
+		Ang = Angle( 0, 0, 0 ),
+		Color1 = "WHITE",
+		Color2 = "WHITE"
+	},
+	[95] = {
+		ID = "TDM Front Interior Lightbar",
+		Scale = 1.12,
+		Pos = Vector( 0, 28.1, 71.4),
+		Ang = Angle( 0, 90, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[96] = {
+		ID = "TDM Front Interior Lightbar",
+		Scale = 1.12,
+		Pos = Vector( 0, 28.1, 71.4),
+		Ang = Angle( 0, 90, 0 ),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[97] = {
+		ID = "Federal Signal Viper",
+		Scale = 1,
+		Pos = Vector( 26, 29.62, 69),
+		Ang = Angle( 0, 85, 2 ),
+		Color1 = "BLUE",
+		Color2 = "WHITE",
+		Phase = "A"
+	},
+	[98] = {
+		ID = "Federal Signal Viper",
+		Scale = 1,
+		Pos = Vector( -26, 29.6, 69),
+		Ang = Angle( 0, 95, -2 ),
+		Color1 = "BLUE",
+		Color2 = "WHITE",
+		Phase = "B"
+	},
+	[99] = {
+		ID = "Federal Signal Viper",
+		Scale = 1,
+		Pos = Vector( 26, 29.62, 69),
+		Ang = Angle( 0, 85, 2 ),
+		Color1 = "RED",
+		Color2 = "WHITE",
+		Phase = "A"
+	},
+	[100] = {
+		ID = "Federal Signal Viper",
+		Scale = 1,
+		Pos = Vector( -26, 29.6, 69),
+		Ang = Angle( 0, 95, -2 ),
+		Color1 = "RED",
+		Color2 = "WHITE",
+		Phase = "B"
+	},
+	[101] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 26, 28.6, 70),
+		Ang = Angle( 0, 85, 2 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE",
+		Phase = "A"
+	},
+	[102] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -26, 28.6, 70),
+		Ang = Angle( 0, 95, -2 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE",
+		Phase = "B"
+	},
+	[103] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 26, 28.6, 70),
+		Ang = Angle( 0, 85, 2 ),
+		Color1 = "RED",
+		Color2 = "RED",
+		Phase = "A"
+	},
+	[104] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -26, 28.6, 70),
+		Ang = Angle( 0, 95, -2 ),
+		Color1 = "RED",
+		Color2 = "RED",
+		Phase = "B"
+	},
+	[105] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 0, 52, 58),
+		Ang = Angle( 0, 90, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[106] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 0, 52, 58),
+		Ang = Angle( 0, 90, 0 ),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[107] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 22, -92, 72.5),
+		Ang = Angle( 0, -80, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE",
+		Phase = "A"
+	},
+	[108] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -22, -92, 72.5),
+		Ang = Angle( 0, -100, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE",
+		Phase = "B"
+	},
+	[109] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 22, -92, 72.5),
+		Ang = Angle( 0, -80, 0 ),
+		Color1 = "RED",
+		Color2 = "RED",
+		Phase = "A"
+	},
+	[110] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -22, -92, 72.5),
+		Ang = Angle( 0, -100, 0 ),
+		Color1 = "RED",
+		Color2 = "RED",
+		Phase = "B"
+	},
+	[111] = {
+		ID = "Tomar 200S Rear",
+		Scale = .66,
+		Pos = Vector( 0, -94, 72.5 ),
+		Ang = Angle( 0, -90, 0 ),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[112] = {
+		ID = "Tomar 200S Rear",
+		Scale = .66,
+		Pos = Vector( 0, -94, 72.5 ),
+		Ang = Angle( 0, -90, 0 ),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[113] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 12, -101, 63.5 ),
+		Ang = Angle( 0, -90, -180 ),
+		Phase = "A",
+		Color1 = "BLUE",
+		Color2 = "AMBER"
+	},
+	[114] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -12, -101, 63.5 ),
+		Ang = Angle( 0, -90, -180 ),
+		Phase = "B",
+		Color1 = "AMBER",
+		Color2 = "RED"
+	},
+	[115] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 12, -101, 63.5 ),
+		Ang = Angle( 0, -90, -180 ),
+		Phase = "A",
+		Color1 = "BLUE",
+		Color2 = "AMBER"
+	},
+	[116] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -12, -101, 63.5 ),
+		Ang = Angle( 0, -90, -180 ),
+		Phase = "B",
+		Color1 = "AMBER",
+		Color2 = "BLUE"
+	},
+	[117] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 12, -101, 63.5 ),
+		Ang = Angle( 0, -90, -180 ),
+		Phase = "A",
+		Color1 = "RED",
+		Color2 = "AMBER"
+	},
+	[118] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -12, -101, 63.5 ),
+		Ang = Angle( 0, -90, -180 ),
+		Phase = "B",
+		Color1 = "AMBER",
+		Color2 = "RED"
+	},
+	[119] = {
+		ID = "Whelen 700 Trio",
+		Scale = 1,
+		Pos = Vector( -38.6, -45, 60 ),
+		Ang = Angle( 2, 90, -90 ),
+		Color1 = "BLUE",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[120] = {
+		ID = "Whelen 700 Trio",
+		Scale = 1,
+		Pos = Vector( 38.6, -45, 60 ),
+		Ang = Angle( 2, 90, 90 ),
+		Color1 = "BLUE",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[121] = {
+		ID = "Whelen 700 Trio",
+		Scale = 1,
+		Pos = Vector( -38.6, -45, 60 ),
+		Ang = Angle( 2, 90, -90 ),
+		Color1 = "RED",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[122] = {
+		ID = "Whelen 700 Trio",
+		Scale = 1,
+		Pos = Vector( 38.6, -45, 60 ),
+		Ang = Angle( 2, 90, 90 ),
+		Color1 = "RED",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[123] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 34, -81, 62 ),
+		Ang = Angle( 0, 0, -180 ),
+		Phase = "C",
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[124] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -34, -81, 62 ),
+		Ang = Angle( 0, -180, -180 ),
+		Phase = "C",
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[125] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( 34, -81, 62 ),
+		Ang = Angle( 0, 0, -180 ),
+		Phase = "C",
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[126] = {
+		ID = "Federal Signal Viper Dual",
+		Scale = 1,
+		Pos = Vector( -34, -81, 62 ),
+		Ang = Angle( 0, -180, -180 ),
+		Phase = "C",
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[127] = {
+		ID = "Whelen Ion Trio",
+		Scale = .8,
+		Pos = Vector( 49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, -25, 2 ),
+		Phase = "A"
+	},
+	[128] = {
+		ID = "Whelen Ion Trio",
+		Scale = .8,
+		Pos = Vector( -49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, 25, 2 ),
+		Phase = "B"
+	},
+	[129] = {
+		ID = "Whelen Ion Split",
+		Scale = .8,
+		Pos = Vector( 49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, -25, 2 ),
+		Color1 = "BLUE",
+		Color2 = "WHITE"
+	},
+	[130] = {
+		ID = "Whelen Ion Split",
+		Scale = .8,
+		Pos = Vector( -49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, 25, 2 ),
+		Color1 = "WHITE",
+		Color2 = "BLUE"
+	},
+	[131] = {
+		ID = "Whelen Ion Split",
+		Scale = .8,
+		Pos = Vector( 49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, -25, 2 ),
+		Color1 = "RED",
+		Color2 = "WHITE"
+	},
+	[132] = {
+		ID = "Whelen Ion Split",
+		Scale = .8,
+		Pos = Vector( -49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, 25, 2 ),
+		Color1 = "WHITE",
+		Color2 = "RED"
+	},
+	[133] = {
+		ID = "Whelen Ion Split",
+		Scale = .8,
+		Pos = Vector( 49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, -25, 2 ),
+		Color1 = "RED",
+		Color2 = "BLUE"
+	},
+	[134] = {
+		ID = "Whelen Ion Split",
+		Scale = .8,
+		Pos = Vector( -49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, 25, 2 ),
+		Color1 = "BLUE",
+		Color2 = "RED"
+	},
+	[135] = {
+		ID = "Whelen Ion",
+		Scale = .8,
+		Pos = Vector( 49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, -25, 2 ),
+		Phase = "A",
+		Color1 = "RED"
+	},
+	[136] = {
+		ID = "Whelen Ion",
+		Scale = .8,
+		Pos = Vector( -49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, 25, 2 ),
+		Phase = "B",
+		Color1 = "RED"
+	},
+	[137] = {
+		ID = "Whelen Ion",
+		Scale = .8,
+		Pos = Vector( 49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, -25, 2 ),
+		Phase = "A",
+		Color1 = "BLUE"
+	},
+	[138] = {
+		ID = "Whelen Ion",
+		Scale = .8,
+		Pos = Vector( -49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, 25, 2 ),
+		Phase = "B",
+		Color1 = "BLUE"
+	},
+	[139] = {
+		ID = "Federal Signal Valor",
+		Scale = .93,
+		Pos = Vector( 0, -4, 83.6 ),
+		Ang = Angle( 1.7, 90, 0),
+		Phase = "A"
+	},
+	[140] = {
+		ID = "Whelen 700 Trio",
+		Scale = .7,
+		Pos = Vector(-23, -109.6, 51),
+		Ang = Angle(0, -15, 90),
+		Phase = "A",
+		Color1 = "BLUE",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[141] = {
+		ID = "Whelen 700 Trio",
+		Scale = .7,
+		Pos = Vector(23, -109.6, 51),
+		Ang = Angle(0, 15, 90),
+		Phase = "B",
+		Color1 = "BLUE",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[142] = {
+		ID = "Whelen 700 Trio",
+		Scale = .7,
+		Pos = Vector(-23, -109.6, 51),
+		Ang = Angle(0, -15, 90),
+		Phase = "A",
+		Color1 = "RED",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[143] = {
+		ID = "Whelen 700 Trio",
+		Scale = .7,
+		Pos = Vector(23, -109.6, 51),
+		Ang = Angle(0, 15, 90),
+		Phase = "B",
+		Color1 = "RED",
+		Color2 = "AMBER",
+		Color3 = "WHITE"
+	},
+	[144] = {
+		ID = "Federal Signal Valor",
+		Scale = .93,
+		Pos = Vector( 0, -4, 83.6 ),
+		Ang = Angle( 1.7, 90, 0),
+		Phase = "CA"
+	},
+	[145] = {
+		ID = "Federal Signal Valor",
+		Scale = .93,
+		Pos = Vector( 0, -4, 83.6 ),
+		Ang = Angle( 1.7, 90, 0),
+		Phase = "A",
+		Color1 = "BLUE",
+		Color2 = "WHITE"
+	},
+	[146] = {
+		ID = "Federal Signal Valor",
+		Scale = .93,
+		Pos = Vector( 0, -4, 83.6 ),
+		Ang = Angle( 1.7, 90, 0),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[147] = {
+		ID = "Federal Signal Valor",
+		Scale = .93,
+		Pos = Vector( 0, -4, 83.6 ),
+		Ang = Angle( 1.7, 90, 0),
+		Phase = "A",
+		Color1 = "RED",
+		Color2 = "AMBER"
+	},
+	[148] = {
+		ID = "Federal Signal Valor",
+		Scale = .93,
+		Pos = Vector( 0, -4, 83.6 ),
+		Ang = Angle( 1.7, 90, 0),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[149] = {
+		ID = "Federal Signal Valor",
+		Scale = .93,
+		Pos = Vector( 0, -4, 83.6 ),
+		Ang = Angle( 1.7, 90, 0),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[150] = {
+		ID = "Federal Signal Hotfoot",
+		Scale = 1,
+		Pos = Vector( -25, 3.6, 81.2 ),
+		Ang = Angle( 0, 0, 0),
+		Color1 = "RED",
+		Phase = "CA"
+	},
+	[151] = {
+		ID = "Federal Signal Hotfoot",
+		Scale = 1,
+		Pos = Vector( 25, 3.6, 81.2 ),
+		Ang = Angle( 0, 0, 0),
+		Color1 = "BLUE",
+		Phase = "CA"
+	},
+	[152] = {
+		ID = "Whelen Ion",
+		Scale = .8,
+		Pos = Vector( 49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, -25, 2 ),
+		Color1 = "BLUE"
+	},
+	[153] = {
+		ID = "Whelen Ion",
+		Scale = .8,
+		Pos = Vector( -49.6, 37.8, 59.4 ),
+		Ang = Angle( 0, 25, 2 ),
+		Color1 = "RED",
+		Phase = "CA"
+	},
+	[154] = {
+		ID = "Federal Signal Legend Blue",
+		Scale = 1.05,
+		Pos = Vector( 0, -8.5, 83 ),
+		Ang = Angle( 1, 90, 0),
+	},
+	[155] = {
+		ID = "Federal Signal Legend Red",
+		Scale = 1.05,
+		Pos = Vector( 0, -8.5, 83 ),
+		Ang = Angle( 1, 90, 0),
+	},
+	[156] = {
+		ID = "Whelen Justice",
+		Scale = 1.06,
+		Pos = Vector( 0, -7.1, 84 ),
+		Ang = Angle( 1, 90, 0),
+		Color1 = "BLUE",
+		Color2 = "BLUE",
+	},
+	[157] = {
+		ID = "Whelen Justice",
+		Scale = 1.06,
+		Pos = Vector( 0, -7.1, 84 ),
+		Ang = Angle( 1, 90, 0),
+		Color1 = "RED",
+		Color2 = "RED",
+	},
+	[158] = {
+		ID = "Federal Signal Integrity",
+		Scale = 1,
+		Pos = Vector( 0, -10.4, 82 ),
+		Ang = Angle( 1, 90, 0),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[159] = {
+		ID = "Federal Signal Integrity",
+		Scale = 1,
+		Pos = Vector( 0, -10.4, 82 ),
+		Ang = Angle( 1, 90, 0),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[160] = {
+		ID = "Whelen Ultra Freedom",
+		Scale = 1,
+		Pos = Vector( 0, -8.1, 84 ),
+		Ang = Angle( 1, 90, 0),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+
+	},
+	[161] = {
+		ID = "Whelen Ultra Freedom",
+		Scale = 1,
+		Pos = Vector( 0, -8.1, 84 ),
+		Ang = Angle( 1, 90, 0),
+		AutoPatterns = true,
+		Color1 = "RED",
+		Color2 = "RED"
+	},
+	[162] = {
+		ID = "Whelen Liberty SX",
+		Scale = .98,
+		Pos = Vector( 0, -8, 83 ),
+		Ang = Angle( 1, 90, 0),
+		Color1 = "BLUE",
+		Color2 = "BLUE"
+	},
+	[163] = {
+		ID = "Whelen Liberty SX",
+		Scale = .98,
+		Pos = Vector( 0, -8, 83 ),
+		Ang = Angle( 1, 90, 0),
+		Color1 = "RED",
+		Color2 = "RED"
+	},
 }
 
 EMV.Selections = { -- structured and flexible version of presets designed to mimic bodygroups
 	{
 		Name = "Pushbars",
 		Options = {
-			{ Category = "Setina Pushbar", Name = "R/B Trio", Props = { 13 }, Auto = { 44, 45 } },
+			{ Category = "Setina Pushbar", Name = "R/B Trio", Props = { 13 }, Auto = { 44, 45, 70, 71 } },
+			{ Category = "Setina Pushbar", Name = "R/B Split", Props = { 13 }, Auto = { 75, 76, 70, 71 } },
+			{ Category = "Setina Pushbar", Name = "B/W Split", Props = { 13 }, Auto = { 79, 80, 70, 71 } },
+			{ Category = "Setina Pushbar", Name = "R/W Split", Props = { 13 }, Auto = { 77, 78, 70, 71 } },
 			{ Category = "Setina Pushbar", Name = "CHP - Red", Props = { 13 }, Auto = { 57, 58 } },
 			{ Category = "Setina Pushbar", Name = "Plain", Props = { 13 } },
 			{ Category = "LED Pushbar", Name = "Red/Blue", Auto = { 12 } },
@@ -874,6 +1672,8 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 		Name = "Bumper Layout",
 		Options = {
 			{ Category = "Fog Lights", Name = "Red/Blue", Auto = { 40 }, Bodygroups = { { 7, 1 } } },
+			{ Category = "Fog Lights", Name = "Blue", Auto = { 81 }, Bodygroups = { { 7, 1 } } },
+			{ Category = "Fog Lights", Name = "Red", Auto = { 82 }, Bodygroups = { { 7, 1 } } },
 			{ Category = "Fog Lights", Name = "CHP - White", Auto = { 59 }, Bodygroups = { { 7, 1 } } },
 			{ Name = "None", Bodygroups = { { 7, 0 } } },
 			{ Name = "Pushbar Wraparound", Props = { 18, 19 }, Bodygroups = { { 7, 0 } } },
@@ -885,6 +1685,9 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 			{ Name = "None" },
 			{ Name = "Whelen Ion R/B", Auto = { 36, 37 } },
 			{ Name = "Whelen Ion R/B Split", Auto = { 34, 35 } },
+			{ Name = "Whelen Ion Blue", Auto = { 83, 84 } },
+			{ Name = "Whelen Ion Red", Auto = { 85, 86 } },
+			{ Name = "NYPD Red", Auto = { 87, 88 } },
 		}
 	},
 	{
@@ -896,15 +1699,34 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 			{ Category = "Whelen Liberty II", Name = "Default", Auto = { 32 } },
 			{ Category = "Whelen Liberty II", Name = "CHP", Auto = { 54 } },
 			{ Category = "Whelen Liberty SX", Name = "Default", Auto = { 7 } },
+			{ Category = "Whelen Liberty SX", Name = "Blue", Auto = { 162 } },
+			{ Category = "Whelen Liberty SX", Name = "Red", Auto = { 163 } },
 			{ Category = "Whelen Ultra Freedom", Name = "Red/Blue", Auto = { 25 } },
+			{ Category = "Whelen Ultra Freedom", Name = "Blue", Auto = { 160 } },
+			{ Category = "Whelen Ultra Freedom", Name = "Red", Auto = { 161 } },
 			{ Category = "Whelen Justice", Name = "Red/Blue", Auto = { 5 } },
+			{ Category = "Whelen Justice", Name = "Blue", Auto = { 156 } },
+			{ Category = "Whelen Justice", Name = "Red", Auto = { 157 } },
 			{ Category = "Code 3 RX2700", Name = "Red/Blue", Auto = { 33 } },
+			{ Category = "Code 3 RX2700", Name = "Blue", Auto = { 63 } },
+			{ Category = "Code 3 RX2700", Name = "Red", Auto = { 64 } },
+			{ Category = "Code 3 RX2700", Name = "Multi-Color", Auto = { 65 } },
 			{ Category = "Federal Signal Vision SLR", Name = "Red/Blue", Auto = { 10 } },
 			{ Category = "Federal Signal Vision SLR", Name = "Red/Blue Clear", Auto = { 11 } },
 			{ Category = "Federal Signal Vision SLR", Name = "NYPD", Auto = { 4 } },
 			{ Category = "Federal Signal Integrity", Name = "Red/Blue", Auto = { 1 } },
+			{ Category = "Federal Signal Integrity", Name = "Blue", Auto = { 158 } },
+			{ Category = "Federal Signal Integrity", Name = "Red", Auto = { 159 } },
 			{ Category = "Federal Signal Legend", Name = "Red/Blue", Auto = { 2 } },
-			{ Name = "Federal Signal Valor", Auto = { 3 } },
+			{ Category = "Federal Signal Legend", Name = "Blue", Auto = { 154 } },
+			{ Category = "Federal Signal Legend", Name = "Red", Auto = { 155 } },
+			{ Category = "Federal Signal Valor", Name = "Default", Auto = { 3 } },
+			{ Category = "Federal Signal Valor", Name = "Alternate 1", Auto = { 139 } },
+			{ Category = "Federal Signal Valor", Name = "California", Auto = { 144, 150, 151 } },
+			{ Category = "Federal Signal Valor", Name = "Blue/White", Auto = { 145 } },
+			{ Category = "Federal Signal Valor", Name = "Blue", Auto = { 146 } },
+			{ Category = "Federal Signal Valor", Name = "Red/Amber", Auto = { 147 } },
+			{ Category = "Federal Signal Valor", Name = "Red", Auto = { 148 } },
 			{ Name = "None" },
 		}
 	},
@@ -919,6 +1741,9 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 		Name = "Forward Hideaways",
 		Options = {
 			{ Name = "Red/Blue", Auto = { 41 } },
+			{ Name = "Blue", Auto = { 89 } },
+			{ Name = "Red", Auto = { 90 } },
+			{ Name = "White", Auto = { 91 } },
 			{ Name = "None" },
 		}
 	},
@@ -933,6 +1758,9 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 		Name = "Reverse Light Hideaways",
 		Options = {
 			{ Name = "Red/Blue", Auto = { 46 } },
+			{ Name = "Blue", Auto = { 92 } },
+			{ Name = "Red", Auto = { 93 } },
+			{ Name = "White", Auto = { 94 } },
 			{ Name = "None" },
 		}
 	},
@@ -941,7 +1769,24 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 		Options = {
 			{ Name = "None" },
 			{ Category = "Inner Bar", Name = "Red/Blue", Auto = { 9 } },
+			{ Category = "Inner Bar", Name = "Blue", Auto = { 95 } },
+			{ Category = "Inner Bar", Name = "Red", Auto = { 96 } },
 			{ Category = "Inner Bar Small", Name = "Red/Blue", Auto = { 60 } },
+			{ Category = "Single Vipers", Name = "Red/Blue", Auto = { 21, 22 } },
+			{ Category = "Single Vipers", Name = "Blue", Auto = { 97, 98 } },
+			{ Category = "Single Vipers", Name = "Red", Auto = { 99, 100 } },
+			{ Category = "Dual Vipers", Name = "Red/Blue", Auto = { 72, 73 } },
+			{ Category = "Dual Vipers", Name = "Blue", Auto = { 101, 102 } },
+			{ Category = "Dual Vipers", Name = "Red", Auto = { 103, 104 } },
+		}
+	},
+	{
+		Name = "Front Lower Deck",
+		Options = {
+			{ Name = "None" },
+			{ Category = "Viper Dual", Name = "Red/Blue", Auto = { 74 } },
+			{ Category = "Viper Dual", Name = "Blue", Auto = { 105 } },
+			{ Category = "Viper Dual", Name = "Red", Auto = { 106 } },
 		}
 	},
 	{
@@ -951,7 +1796,11 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 			{ Category = "Inner Bar", Name = "Blue", Auto = { 30 } },
 			{ Category = "Inner Bar", Name = "Red", Auto = { 31 } },
 			{ Category = "Dual Vipers", Name = "Red/Blue", Auto = { 17, 18 } },
+			{ Category = "Dual Vipers", Name = "Blue", Auto = { 107, 108 } },
+			{ Category = "Dual Vipers", Name = "Red", Auto = { 109, 110 } },
 			{ Category = "Tomar 200S", Name = "Red/Blue/Amber", Auto = { 49 } },
+			{ Category = "Tomar 200S", Name = "Blue/Amber", Auto = { 111 } },
+			{ Category = "Tomar 200S", Name = "Red/Amber", Auto = { 112 } },
 			{ Name = "None" },
 		}
 	},
@@ -959,14 +1808,21 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 		Name = "Rear Lower Deck",
 		Options = {
 			{ Name = "None" },
+			{ Name = "Red/Blue/Amber", Auto = { 113, 114 } },
+			{ Name = "Blue/Amber", Auto = { 115, 116 } },
+			{ Name = "Red/Amber", Auto = { 117, 118 } },
 			{ Name = "NYPD R/B", Auto = { 52, 53 } },
 		}
 	},
 	{
 		Name = "Mid-Level Side",
 		Options = {
-			{ Name = "Whelen 700 R/B/W", Auto = { 47, 48 } },
-			{ Name = "Rear Vipers", Auto = { 50, 51 } },
+			{ Category = "Whelen 700", Name = "R/B/W", Auto = { 47, 48 } },
+			{ Category = "Whelen 700", Name = "B/A/W", Auto = { 119, 120 } },
+			{ Category = "Whelen 700", Name = "R/A/W", Auto = { 121, 122 } },
+			{ Category = "Viper Dual", Name = "Red/Blue", Auto = { 50, 51 } },
+			{ Category = "Viper Dual", Name = "Blue", Auto = { 123, 124 } },
+			{ Category = "Viper Dual", Name = "Red", Auto = { 125, 126 } },
 			{ Name = "None" },
 		}
 	},
@@ -974,7 +1830,14 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 		Name = "Mirror Lights",
 		Options = {
 			{ Category = "Whelen Ion", Name = "Red/Blue", Auto = { 38, 39 } },
+			{ Category = "Whelen Ion", Name = "Blue", Auto = { 137, 138 } },
+			{ Category = "Whelen Ion", Name = "Red", Auto = { 135, 136 } },
 			{ Category = "Whelen Ion", Name = "CHP - Red", Auto = { 55, 56 } },
+			{ Category = "Whelen Ion", Name = "CA - Red/Blue", Auto = { 152, 153 } },
+			{ Category = "Whelen Ion Split", Name = "Red/Blue", Auto = { 133, 134 } },
+			{ Category = "Whelen Ion Split", Name = "Blue", Auto = { 129, 130 } },
+			{ Category = "Whelen Ion Split", Name = "Red", Auto = { 131, 132 } },
+			{ Name = "Whelen Ion R/B Trio", Auto = { 128, 127 } },
 			{ Name = "None" },
 		}
 	},
@@ -1012,168 +1875,24 @@ EMV.Selections = { -- structured and flexible version of presets designed to mim
 			{ Name = "Front", Props = { 16, 17 } },
 			{ Name = "Reverse", Props = { 14, 15 } },
 		}
+	},
+	{
+		Name = "Rear Vertexes",
+		Options = {
+			{ Name = "White", Auto = { 66, 67 } },
+			{ Name = "None" },
+		}
+	},
+	{
+		Name = "Rear Trunk Lights",
+		Options = {
+			{ Name = "Red/Blue", Auto = { 68, 69 } },
+			{ Name = "Blue", Auto = { 140, 141 } },
+			{ Name = "Red", Auto = { 142, 143 } },
+			{ Name = "None" },
+		}
 	}
 }
-
--- local PI = {}
-
--- PI.Meta = {
-
--- 	headlight = {
--- 		AngleOffset = -90,
--- 		W = 10,
--- 		H = 10,
--- 		Sprite = "sprites/emv/fpiu_headlight",
--- 		Scale = 2.5,
--- 		WMult = 1
--- 	},
-
--- 	running = {
--- 		AngleOffset = -90,
--- 		W = 7.5,
--- 		H = 10,
--- 		Sprite = "sprites/emv/fpiu_running",
--- 		Scale = 2.5,
--- 		WMult = 1
--- 	},
-
--- 	side_marker = {
--- 		AngleOffset = -90,
--- 		W = 13,
--- 		H = 13,
--- 		Sprite = "sprites/emv/fpiu_sidemarker",
--- 		Scale = 1.5,
--- 		WMult = .5
--- 	},
-
--- 	turn_signal = {
--- 		AngleOffset = -90,
--- 		W = 10,
--- 		H = 12,
--- 		Sprite = "sprites/emv/fpiu_turnsignal",
--- 		Scale = 1,
--- 		WMult = 1
--- 	},
-
--- 	front_hideaway = {
--- 		AngleOffset = -90,
--- 		W = 17,
--- 		H = 15,
--- 		Sprite = "sprites/emv/fpiu_hideaway",
--- 		Scale = 1,
--- 		WMult = 1
--- 	},
-
--- 	fog_lamp = {
--- 		AngleOffset = -90,
--- 		W = 22,
--- 		H = 17,
--- 		Sprite = "sprites/emv/fpiu_foglamp",
--- 		Scale = 2,
--- 		WMult = .6
--- 	},
-
--- 	brake_light = {
--- 		AngleOffset = 90,
--- 		W = 12,
--- 		H = 10,
--- 		Sprite = "sprites/emv/fpiu_brakelight",
--- 		Scale = 1.5,
--- 		WMult = 2.5
--- 	},
-
--- 	taillight = {
--- 		AngleOffset = 90,
--- 		W = 8,
--- 		H = 8,
--- 		Sprite = "sprites/emv/fpiu_taillight",
--- 		Scale = 1.5,
--- 		WMult = 1
--- 	},
-
--- 	rear_turn = {
--- 		AngleOffset = 90,
--- 		W = 14,
--- 		H = 14,
--- 		Sprite = "sprites/emv/fpiu_rearturn",
--- 		Scale = 2,
--- 		WMult = .75
--- 	},
-
--- 	rear_marker = {
--- 		AngleOffset = 90,
--- 		W = 10,
--- 		H = 10,
--- 		Sprite = "sprites/emv/fpiu_rearmarker",
--- 		Scale = .5,
--- 		WMult = 2
--- 	},
-
--- 	reverse = {
--- 		AngleOffset = 90,
--- 		W = 8,
--- 		H = 8,
--- 		Sprite = "sprites/emv/fpiu_reverse",
--- 		Scale = 1,
--- 		WMult = 1
--- 	},
-
--- }
-
--- PI.Positions = {
--- 	[1] = { Vector( -28, 103.33, 44.13 ), Angle( 0, 31, 17 ), "headlight" },
--- 	[2] = { Vector( 28, 103.33, 44.13 ), Angle( 180, (-31), 180-17 ), "headlight" },
-
--- 	[3] = { Vector( -39.27, 91.78, 44.53 ), Angle( 0, 65, 20 ), "side_marker" },
--- 	[4] = { Vector( 39.27, 91.78, 44.53 ), Angle( 180, -65, 180-20 ), "side_marker" },
-
--- 	[5] = { Vector( -34.04, 98.06, 44.38 ), Angle( 0, 37, 17 ), "running" },
--- 	[6] = { Vector( 34.04, 98.06, 44.38 ), Angle( 180, (-37), 180-17 ), "running" },
-
--- 	[7] = { Vector( -37.39, 97.14, 41.43 ), Angle( 1, 58.9, 14 ), "turn_signal" },
--- 	[8] = { Vector( 37.39, 97.14, 41.43 ), Angle( 180-1, -58.9, 180-14 ), "turn_signal" },
-
--- 	[9] = { Vector( -25.89, 107.04, 41.23 ), Angle( 1, 30, 0 ), "front_hideaway" },
--- 	[10] = { Vector( 25.89, 107.04, 41.23 ), Angle( 180-1, -30, 180 ), "front_hideaway" },
-
--- 	[11] = { Vector( -37.96, 98.48, 30.03 ), Angle( 1, 47, 0 ), "fog_lamp" },
--- 	[12] = { Vector( 37.96, 98.48, 30.03 ), Angle( 180-1, -47, 180 ), "fog_lamp" },
-
--- 	[13] = { Vector( 0, -96.1, 76.35 ), Angle( 0, 0, 39.3 ), "brake_light" },
-
--- 	[14] = { Vector( -32.8, -104.4, 50 ), Angle( 0, -30, -10 ), "taillight" },
--- 	[15] = { Vector( 32.8, -104.4, 50 ), Angle( 180, 30, 180+10 ), "taillight" },
-
--- 	[16] = { Vector( -35.02, -103.73, 47.67 ), Angle( -5.19, -30.14, -6.99 ), "rear_turn" },
--- 	[17] = { Vector( 35.02, -103.73, 47.67 ), Angle( 180+5.19, 30.14, 180+6.99 ), "rear_turn" },
-
--- 	[18] = { Vector( -38.97, -93.45, 55.67 ), Angle( 0, -75, -13 ), "rear_marker" },
--- 	[19] = { Vector( 38.97, -93.45, 55.67 ), Angle( 180, 75, 180+13 ), "rear_marker" },
-
--- 	[20] = { Vector( -32.32, -104.33, 53.92 ), Angle( 0, -30.14, 0 ), "reverse" },
--- 	[21] =  {Vector( 32.32, -104.33, 53.92 ), Angle( 180, 30.14, 180), "reverse" },
--- }
-
--- PI.States = {}
-
--- PI.States.Headlights = {}
--- PI.States.Brakes = {
--- 	{ 13, R }, { 14, DR }, { 15, DR }
--- }
--- PI.States.Blink_Left = {
--- 	{ 16, A }, { 7, A },
--- }
--- PI.States.Blink_Right = {
--- 	{ 17, A }, { 8, A }, 
--- }
--- PI.States.Reverse = {
--- 	{ 20, W }, { 21, W },
--- }
--- PI.States.Running = {
--- 	{ 3, A }, { 4, A }, { 5, CW, .5 }, { 6, CW, .5 }, 
--- 	{ 14, DR, .5 }, { 15, DR, .5 },
--- 	{ 18, DR, .5 }, { 19, DR, .5 }, 
--- }
 
 local V = {
 				// Required information
